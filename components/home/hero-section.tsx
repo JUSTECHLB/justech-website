@@ -619,7 +619,7 @@ function EnhancedAnimatedLogo() {
 
 					<div className="relative w-48 h-48 flex items-center justify-center">
 						<Image
-							src="https://justechlb.com/wp-content/uploads/2023/06/JT-Icon-Transparent-150x150.png"
+							src="jt.webp"
 							alt="JusTech Logo"
 							width={150}
 							height={150}

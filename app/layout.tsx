@@ -11,8 +11,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
 	title: "JUSTECH - Software Development Agency",
-	description:
-		"JUSTECH is a leading software development agency specializing in website design, development, and SEO optimization.",
+	description: "JUSTECH is a leading software development agency specializing in website design, development, and SEO optimization.",
+	icons: {
+		icon: "/favicon.ico",
+	},
 };
 
 export const images = {

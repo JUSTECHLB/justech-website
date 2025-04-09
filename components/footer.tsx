@@ -46,9 +46,7 @@ export default function Footer() {
 										className="mr-3 text-blue-light mt-1"
 									/>
 									<span className="text-gray-300">
-										123 Tech Street, Digital City
-										<br />
-										Lebanon, 12345
+										Beirut, Lebanon
 									</span>
 								</li>
 								<li className="flex items-center">
@@ -57,7 +55,7 @@ export default function Footer() {
 										className="mr-3 text-blue-light"
 									/>
 									<span className="text-gray-300">
-										+961 1 234 567
+										+961 78 890 304
 									</span>
 								</li>
 								<li className="flex items-center">
@@ -66,7 +64,7 @@ export default function Footer() {
 										className="mr-3 text-blue-light"
 									/>
 									<span className="text-gray-300">
-										info@justechlb.com
+										contact@justechlb.com
 									</span>
 								</li>
 							</ul>
@@ -78,7 +76,7 @@ export default function Footer() {
 							</h3>
 							<div className="flex space-x-4 mb-8">
 								<Link
-									href="https://facebook.com"
+									href="https://www.facebook.com/justechlb"
 									className="w-10 h-10 rounded-full bg-dark-lighter border border-blue/20 flex items-center justify-center hover:border-blue-light transition-colors"
 								>
 									<Facebook
@@ -87,16 +85,7 @@ export default function Footer() {
 									/>
 								</Link>
 								<Link
-									href="https://twitter.com"
-									className="w-10 h-10 rounded-full bg-dark-lighter border border-blue/20 flex items-center justify-center hover:border-blue-light transition-colors"
-								>
-									<Twitter
-										size={18}
-										className="text-blue-light"
-									/>
-								</Link>
-								<Link
-									href="https://instagram.com"
+									href="https://www.instagram.com/justechlb"
 									className="w-10 h-10 rounded-full bg-dark-lighter border border-blue/20 flex items-center justify-center hover:border-blue-light transition-colors"
 								>
 									<Instagram
@@ -105,7 +94,7 @@ export default function Footer() {
 									/>
 								</Link>
 								<Link
-									href="https://linkedin.com"
+									href="https://www.linkedin.com/company/justechlb"
 									className="w-10 h-10 rounded-full bg-dark-lighter border border-blue/20 flex items-center justify-center hover:border-blue-light transition-colors"
 								>
 									<Linkedin
@@ -150,8 +139,7 @@ export default function Footer() {
 						</Link>
 						<p className="text-gray-400 text-sm">
 							JUSTECH is a leading software development agency
-							specializing in website design, development, and SEO
-							optimization.
+							specialized in revenue scaling, business operation optimization, and tech transformation.
 						</p>
 					</div>
 

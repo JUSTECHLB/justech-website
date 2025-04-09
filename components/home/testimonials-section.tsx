@@ -27,34 +27,34 @@ const marqueeStyles = `
 export default function TestimonialsSection() {
 	const testimonials = [
 		{
-			name: "Denise Flynn",
-			position: "@denfly",
+			name: "Yasmina Khalaf",
+			position: "@TheYasDesign",
 			avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1974&auto=format&fit=crop",
-			quote: "Using <span class='text-blue-light'>JUSTECH</span>'s sleek UI. It's like a dark mode playground.",
+			quote: "Working with this company has been an amazing experience! They are professional, creative, and incredibly detail-oriented. They truly understood my vision and brought it to life beautifully. The communication was seamless, and the final product exceeded my expectations. I highly recommend their services to anyone looking for a top-notch website!",
 		},
 		{
-			name: "Felix B.",
-			position: "@felixb",
+			name: "Halah Damouri",
+			position: "@CloverMindSolutions",
 			avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1974&auto=format&fit=crop",
-			quote: "Digging into <span class='text-blue-light'>JUSTECH</span>. Those shadows are giving me serious design envy.",
+			quote: "CloverMindSolutions had the pleasure of collaborating with JUSTECH for our web design and development needs, and the experience was nothing short of exceptional. JUSTECH's attention to detail and innovative approach resulted in a website that perfectly encapsulates our brand identity. Their team's dedication to delivering top quality was evident at every stage of the project, and we couldn't be happier with the final outcome. Without a doubt, JUSTECH has set a new standard for excellence in the realm of web design and development services.",
 		},
 		{
-			name: "Fabrizio Fernandez",
-			position: "@fab304",
+			name: "Abbass Diab",
+			position: "@Lebotics",
 			avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop",
-			quote: "Playing around with <span class='text-blue-light'>JUSTECH</span> suddenly made me feeling inspired to launch that side project.",
+			quote: "Lebotics recently engaged JUSTECH for web design and development services, and we couldn't be more impressed. Their team demonstrated a remarkable blend of creativity, technical expertise, and professionalism throughout the project. From concept to execution, JUSTECH delivered top-notch results, exceeding our expectations. We highly recommend their services to anyone seeking exceptional web solutions.",
 		},
 		{
-			name: "Esme Rothschild",
-			position: "@EsmeRothArt",
+			name: "Francesca Cox",
+			position: "@Ensemble Renard",
 			avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1970&auto=format&fit=crop",
-			quote: "<span class='text-blue-light'>JUSTECH</span> is slick. That globe graphic though. Making me feel like I'm building websites for a sci-fi movie.",
+			quote: "Ensemble Renard Musical Band extends our sincerest gratitude to JUSTECH for their outstanding web design and development services. Their meticulous attention to detail and unwavering commitment to quality resulted in a website that truly reflects our band's essence and vision. JUSTECH's expertise seamlessly brought our musical journey to life online, providing a platform that captivates our audience and enhances our brand presence. Without a doubt, JUSTECH has proven themselves as masters of their craft, delivering nothing short of excellence in every aspect of our collaboration.",
 		},
 		{
-			name: "Kai Nakamura",
-			position: "@KaiNakWaves",
+			name: "Graham Burne",
+			position: "@AGS Solutions",
 			avatar: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop",
-			quote: "Just made my first website with <span class='text-blue-light'>JUSTECH</span>. Its flexibility is speaking my language. No drama, just seamless integration.",
+			quote: "<span class=text-blue-light>JUSTECH</span> provided amazing service to develop and deliver our new business website. They understood our needs very well and translated them into a world class website within a very short time.",
 		},
 	];
 

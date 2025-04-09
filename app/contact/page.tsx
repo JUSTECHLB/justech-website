@@ -41,12 +41,24 @@ export default function ContactPage() {
 		setFormData((prev) => ({ ...prev, service: value }));
 	};
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		setIsSubmitting(true);
 
-		setTimeout(() => {
-			setIsSubmitting(false);
+		try {
+			const response = await fetch('/contact.php', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(formData),
+			});
+
+			if (!response.ok) {
+				const errorData = await response.json();
+				throw new Error(errorData.error || 'Failed to send message');
+			}
+
 			setIsSubmitted(true);
 			setFormData({
 				name: "",
@@ -55,7 +67,11 @@ export default function ContactPage() {
 				service: "",
 				message: "",
 			});
-		}, 1500);
+		} catch (error) {
+			console.error('Error sending message:', error);
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	return (
@@ -281,11 +297,11 @@ export default function ContactPage() {
 												Our Location
 											</h3>
 											<p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-												123 Tech Street, Digital City
+												Beirut, Lebanon
 											</p>
-											<p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+											{/* <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
 												Lebanon, 12345
-											</p>
+											</p> */}
 										</div>
 									</div>
 
@@ -298,11 +314,11 @@ export default function ContactPage() {
 												Phone Number
 											</h3>
 											<p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-												+961 1 234 567
+												+961 78 890 304
 											</p>
-											<p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+											{/* <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
 												+961 1 234 568
-											</p>
+											</p> */}
 										</div>
 									</div>
 
@@ -315,11 +331,11 @@ export default function ContactPage() {
 												Email Address
 											</h3>
 											<p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-												info@justechlb.com
+												contact@justechlb.com
 											</p>
-											<p className="text-gray-400 group-hover:text-gray-300 transition-colors">
+											{/* <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
 												support@justechlb.com
-											</p>
+											</p> */}
 										</div>
 									</div>
 
