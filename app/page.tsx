@@ -6,6 +6,7 @@ import PartnersSection from "@/components/home/partners-section"
 import CertificationsSection from "@/components/home/certifications-section"
 import TestimonialsSection from "@/components/home/testimonials-section"
 import CtaSection from "@/components/home/cta-section"
+import ChatBot from "@/components/chatbot"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <CertificationsSection />
       <TestimonialsSection />
       <CtaSection />
+      <ChatBot />
     </main>
   )
 }

@@ -281,3 +281,12 @@
     background-position: 0% 50%;
   }
 }
+
+main.chat-layout.chat-wrapper textarea {
+    color: black !important;
+}
+
+.chat-window-wrapper .chat-window-toggle,
+.chat-layout .chat-header{
+    background-image: linear-gradient(to right, rgb(34, 139, 230)) !important;
+}
