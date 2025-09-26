@@ -49,7 +49,6 @@ export default function Navbar() {
 					</div>
 					<span className="text-xl font-bold">JUSTECH</span>
 				</Link>
-
 				<div className="hidden md:flex items-center gap-8">
 					<Link
 						href="/revenue-scaling"
@@ -68,6 +67,12 @@ export default function Navbar() {
 						className="hover:text-blue-light transition-colors"
 					>
 						Tech Transformation
+					</Link>
+					<Link
+						href="/portfolio"
+						className="hover:text-blue-light transition-colors"
+					>
+						Portfolio
 					</Link>
 				</div>
 
