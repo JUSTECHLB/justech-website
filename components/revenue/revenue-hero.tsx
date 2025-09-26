@@ -52,7 +52,7 @@ export default function RevenueHero() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8 }}
-						className="order-2 lg:orader-1 space-y-8"
+						className="order-2 lg:order-1 space-y-8"
 					>
 						<h1 className="text-6xl md:text-7xl xl:text-8xl font-bold leading-[1.1] tracking-tight">
 							<span className="block text-white/80 font-light">
