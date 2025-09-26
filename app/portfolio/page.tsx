@@ -69,8 +69,8 @@ const projects: Project[] = [
               key={filter.value}
               variant={activeFilter === filter.value ? "default" : "outline"}
               onClick={() => setActiveFilter(filter.value)}
-              className={(activeFilter === filter.value ? "bg-gradient-to-r from-blue to-blue-dark text-white px-8 py-6 text-lg h-auto rounded-full group transition-all duration-300 shadow-lg shadow-blue/20 hover:shadow-blue/30 hover:scale-105": "")+"order-blue/20 hover:bg-dark-lighter text-white px-8 py-6 text-lg h-auto rounded-full backdrop-blur-sm hover:border-blue/40 transition-all duration-300"}
-            >
+          className={
+          (activeFilter === filter.value? "bg-gradient-to-r from-blue to-blue-dark text-white ": "border-blue/20 hover:bg-dark-lighter text-white ") +"px-4 py-2 text-sm sm:px-6 sm:py-3 sm:text-base md:px-8 md:py-6 md:text-lg h-auto rounded-full backdrop-blur-sm hover:border-blue/40 transition-all duration-300"}            >
               {filter.label}
             </Button>
           ))}
