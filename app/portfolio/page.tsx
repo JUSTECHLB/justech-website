@@ -21,8 +21,8 @@ const projects: Project[] = [
         description: "A full-stack e-Responsive corporate website showcasing robotics education, hardware prototyping, and tech services, optimized for web and mobile.",
         image: "images/lebotics-logo.png",
         previewImage: "images/lebotics.jpg",
-        categories: ["web", "seo"],
-        technologies: ["React", "Node.js", "Tailwind CSS"],
+        categories: ["web"],
+        technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
         liveUrl: "https://lebotics.omarchouman.com/"
     },
     {
@@ -31,7 +31,7 @@ const projects: Project[] = [
         image: "images/jmr-logo.png",
         previewImage: "images/jmr.png",
         categories: ["web"],
-        technologies: ["React", "Node.js", "Tailwind CSS"],
+        technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
         liveUrl: "https://jmrconsulting.me/"
     },
     {
@@ -39,17 +39,117 @@ const projects: Project[] = [
         description: "A responsive corporate website designed for AGS Solutions to highlight their services and expertise. Built with a modern design, optimized for both desktop and mobile devices, and structured for SEO visibility.",
         image: "images/ags-logo.png",
         previewImage: "images/ags.png",
-        categories: ["seo", "web"], 
-        technologies: ["React", "Node.js", "Tailwind CSS"],
+        categories: ["web"], 
+        technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
         liveUrl: "https://agssolutions.ae/"
     },
+    {
+      title: "Rut Essentials",
+      description: "A sleek, responsive corporate‐style website built to present high-quality Private Label, Hospitality, and Spa & Salon products. It emphasizes visual storytelling, seamless navigation, and full mobile desktop optimization, aimed at converting style-curious visitors into loyal customers.",
+      image: "images/rut-logo.png",
+      previewImage: "images/rut.png",
+      categories: ["web", "seo"], 
+      technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
+      liveUrl: "https://rutessentials.com/"
+  },
+  {
+    title: "Spade Travel",
+    description: "A modern, responsive web application crafted for Spade’s internal travel agency operations. The dashboard highlights people & resources control, client management, reporting tools, and admin workflows—designed for clarity, performance, and consistency across devices.",
+    image: "images/spade-logo.webp",
+    previewImage: "images/spade.png",
+    categories: ["web"], 
+    technologies: ["PHP", "Laravel", "Blade", "CSS", "JavaScript"],
+    liveUrl: "#"
+  },
+  {
+    title: "AmazeTech",
+    description: "A modern, responsive e-commerce website for AmazeTech, showcasing cutting-edge electronics, accessories, and gadgets. Built with intuitive navigation, clean design, and optimized for mobile and desktop performance to convert tech shoppers into loyal customers.",
+    image: "images/amazetech-logo.webp",
+    previewImage: "images/amazetech.png",
+    categories: ["web", "seo"], 
+    technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
+    liveUrl: "https://amazetechlb.com/"
+  },
+  {
+    title: "Noma Fashion",
+    description: "A clean, high-fashion storefront for Noma Fashion, showcasing abayas, gowns, and women’s wear with refined imagery, clear product categories, and a seamless checkout experience. Fully responsive and built to enhance both style and conversion.",
+    image: "images/noma-logo.png",
+    previewImage: "images/noma.png",
+    categories: ["web"], 
+    technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
+    liveUrl: "https://nomafashion.com/"
+  },
+  {
+    title: "Protein Warehouse Lebanon",
+    description: "A polished, responsive digital storefront for Proten Warehouse, specializing in supplements and wellness products. With clear visuals, fast-loading pages, and full device compatibility, it’s structured to guide visitors from browsing to checkout effortlessly.",
+    image: "images/pwl-logo.webp",
+    previewImage: "images/pwl.png",
+    categories: ["web"], 
+    technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
+    liveUrl: "https://proteinwarehouselb.com/"
+  },
+  {
+    title: "Top Designs HD",
+    description: "An artfully crafted, fully responsive agency website for Top Designs HD—highlighting branding solutions, digital marketing campaigns, and media production. Rich in visuals, seamless in navigation, and structured to convert visitors into clients.",
+    image: "images/topdesigns-logo.png",
+    previewImage: "images/topdesigns.png",
+    categories: ["web"], 
+    technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
+    liveUrl: "https://topdesignshd.com/"
+  },
+  {
+    title: "Fit District",
+    description: "An artfully crafted, fully responsive agency website for Top Designs HD—highlighting branding solutions, digital marketing campaigns, and media production. Rich in visuals, seamless in navigation, and structured to convert visitors into clients.",
+    image: "images/fd-logo.webp",
+    previewImage: "images/fd.png",
+    categories: ["web"], 
+    technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
+    liveUrl: "https://fit-district.com/"
+  },
+  {
+    title: "The Yas Design",
+    description: "A beautifully crafted, fully responsive e-commerce platform for The Yas Design, celebrating planners, notebooks, and desk-essentials. With fine-tuned visuals, intuitive product flows, and mobile + desktop polish, it’s built to turn style lovers into repeat customers.",
+    image: "images/theyasdesign-logo.webp",
+    previewImage: "images/theyasdesign.png",
+    categories: ["web", "seo"], 
+    technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
+    liveUrl: "https://theyasdesign.com/"  
+  },
+  {
+    title: "Maseertak",
+    description: "A beautifully crafted, fully responsive e-commerce platform for The Yas Design, celebrating planners, notebooks, and desk-essentials. With fine-tuned visuals, intuitive product flows, and mobile + desktop polish, it’s built to turn style lovers into repeat customers.",
+    image: "images/maseertak-logo.png",
+    previewImage: "images/maseertak.png",
+    categories: ["maintenance"], 
+    technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
+    liveUrl: "https://maseertak.com/"  
+  },
+  {
+    title: "GME",
+    description: "A beautifully crafted, fully responsive e-commerce platform for The Yas Design, celebrating planners, notebooks, and desk-essentials. With fine-tuned visuals, intuitive product flows, and mobile + desktop polish, it’s built to turn style lovers into repeat customers.",
+    image: "images/gme-logo.png",
+    previewImage: "images/gme.png",
+    categories: ["maintenance"], 
+    technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
+    liveUrl: "https://gme.com.lb/"  
+  },
+  {
+    title: "Alkoun Business",
+    description: "A beautifully crafted, fully responsive e-commerce platform for The Yas Design, celebrating planners, notebooks, and desk-essentials. With fine-tuned visuals, intuitive product flows, and mobile + desktop polish, it’s built to turn style lovers into repeat customers.",
+    image: "images/alkoun-logo.png",
+    previewImage: "images/alkoun.png",
+    categories: ["seo"], 
+    technologies: ["PHP", "WordPress", "HTML", "CSS", "JavaScript"],
+    liveUrl: "https://alkoun-business.com/"  
+  },
 ];
 
   const filters = [
     { label: "All Projects", value: "all" },
     { label: "Web Design & Development", value: "web" },
-    { label: "Mobile Application Development", value: "mobile" },
-    { label: "SEO Projects", value: "seo" }
+    { label: "Maintenance & Support", value: "maintenance" },
+    { label: "Mobile Application", value: "mobile" },
+    { label: "SEO", value: "seo" }
   ];
 
   const filteredProjects = activeFilter === "all" ? projects : projects.filter(project => project.categories.includes(activeFilter));
