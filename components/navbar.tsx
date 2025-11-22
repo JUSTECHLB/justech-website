@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -32,10 +32,11 @@ export default function Navbar() {
 	}, [mobileMenuOpen]);
 
 	return (
+		<>
 		<nav
 			className={cn(
-				"py-6 fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-				scrolled ? "bg-dark/80 backdrop-blur-md" : "bg-transparent"
+				"py-6 sticky top-0 left-0 right-0 z-50 transition-all duration-300",
+				mobileMenuOpen || scrolled ? "bg-dark/80 backdrop-blur-md" : "bg-transparent"
 			)}
 		>
 			<div className="container mx-auto flex items-center justify-between">
@@ -74,6 +75,12 @@ export default function Navbar() {
 					>
 						Portfolio
 					</Link>
+					<Link
+						href="/blog"
+						className="hover:text-blue-light transition-colors"
+					>
+						Blog
+					</Link>
 				</div>
 
 				<Link href="/contact" className="hidden md:block">
@@ -93,10 +100,11 @@ export default function Navbar() {
 					)}
 				</button>
 			</div>
+			</nav>
 
 			<div
 				className={cn(
-					"fixed inset-0 bg-dark z-40 pt-20 px-4 md:hidden transition-transform duration-300 overflow-y-auto",
+					"fixed inset-0 bg-dark z-[100] pt-20 px-4 md:hidden transition-transform duration-300 overflow-y-auto",
 					mobileMenuOpen ? "translate-x-0" : "translate-x-full"
 				)}
 			>
@@ -130,6 +138,20 @@ export default function Navbar() {
 						Tech Transformation
 					</Link>
 					<Link
+						href="/portfolio"
+						className="py-3 border-b border-blue/10"
+						onClick={() => setMobileMenuOpen(false)}
+					>
+						Portfolio
+					</Link>
+					<Link
+						href="/blog"
+						className="py-3 border-b border-blue/10"
+						onClick={() => setMobileMenuOpen(false)}
+					>
+						Blog
+					</Link>
+					<Link
 						href="/about"
 						className="py-3 border-b border-blue/10"
 						onClick={() => setMobileMenuOpen(false)}
@@ -147,6 +169,6 @@ export default function Navbar() {
 					</Link>
 				</div>
 			</div>
-		</nav>
+			</>
 	);
 }
