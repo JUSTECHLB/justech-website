@@ -604,7 +604,7 @@ export default function TechHero() {
 	}, [isLoaded, isMobile, canvasSize.width, canvasSize.height]);
 
 	return (
-		<section className="relative py-20 overflow-hidden bg-dark">
+		<section className="relative pt-2 pb-20 overflow-hidden bg-dark">
 			<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue/5 via-transparent to-transparent"></div>
 
 			<div className="container mx-auto px-4 relative z-10">

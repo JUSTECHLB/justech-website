@@ -155,7 +155,7 @@ const projects: Project[] = [
   const filteredProjects = activeFilter === "all" ? projects : projects.filter(project => project.categories.includes(activeFilter));
 
   return (
-    <section id="portfolio" className="bg-gradient-to-r from-dark-lighter/90 to-dark/90 backdrop-blur-md p-5 z-0 pt-24 pb-16 relative overflow-hidden">
+    <section id="portfolio" className="bg-dark p-5 z-0 pt-4 pb-16 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="text-center space-y-4 mb-16">
           <h2>

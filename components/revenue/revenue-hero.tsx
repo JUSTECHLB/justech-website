@@ -38,7 +38,7 @@ const animationStyles = `
 
 export default function RevenueHero() {
 	return (
-		<section className="relative min-h-screen flex items-center overflow-hidden pt-24 md:pt-32">
+		<section className="relative min-h-screen flex items-center overflow-hidden pt-2 bg-dark">
 			<style dangerouslySetInnerHTML={{ __html: animationStyles }} />
 			<div className="absolute inset-0 bg-dark z-0"></div>
 

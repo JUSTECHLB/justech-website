@@ -120,7 +120,7 @@ export default function BusinessHero() {
 	};
 
 	return (
-		<section className="relative min-h-[90vh] flex items-center py-20 overflow-hidden">
+		<section className="relative min-h-[90vh] flex items-center pt-2 pb-20 overflow-hidden">
 			<div className="absolute inset-0 -z-10">
 				<div className="absolute inset-0 bg-gradient-to-br from-dark via-dark/95 to-dark/90"></div>
 				<div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-indigo/20 to-blue/10 rounded-full blur-[180px] -z-10"></div>

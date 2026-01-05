@@ -42,12 +42,10 @@ export default function BlogPage({
   const filteredPosts = selectedCategory === "All" ? posts : posts.filter(post => post.category === selectedCategory)
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0A0A0A] via-[#0D0D12] to-[#0A0A0A] pt-24 pb-20 relative overflow-hidden">
-    
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(59,158,255,0.1),transparent_70%)] pointer-events-none" />
+    <div className="min-h-screen bg-dark pb-20 relative overflow-hidden">
 
-      <main className="max-w-7xl mx-auto px-6 py-12 relative z-10">
-        <h1 className="mb-16 text-center">
+      <main className="max-w-7xl mx-auto px-6 pt-4 pb-12 relative z-10">
+        <h1 className="mb-12 text-center">
             <span className="text-5xl sm:text-6xl md:text-7xl tracking-tight text-white">JUSTECH</span>
             <span className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-blue-400"> Blog</span>
         </h1>
