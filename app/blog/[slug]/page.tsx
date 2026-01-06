@@ -21,8 +21,9 @@ export async function generateStaticParams() {
   return files.map((file) => ({ slug: file.replace(/\.md$/, "") }))
 }
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const filePath = path.join(process.cwd(), "content/blog", `${params.slug}.md`)
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const filePath = path.join(process.cwd(), "content/blog", `${slug}.md`)
   const file = fs.readFileSync(filePath, "utf8")
   const { data, content } = matter(file)
 
