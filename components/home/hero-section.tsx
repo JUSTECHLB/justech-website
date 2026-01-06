@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Code, Database, Zap } from "lucide-react";
@@ -9,7 +8,7 @@ import { useEffect, useState, useRef } from "react";
 
 export default function HeroSection() {
 	return (
-		<section className="relative min-h-screen flex items-center overflow-hidden pt-24 md:pt-32 lg:pt-40 xl:pt-48">
+		<section className="relative min-h-[80vh] md:min-h-[88vh] flex items-start overflow-hidden py-8 md:py-10 bg-dark">
 			<div className="absolute inset-0 bg-dark z-0"></div>
 			<div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue/10 rounded-full blur-[120px] -z-10"></div>
 			<div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo/10 rounded-full blur-[100px] -z-10"></div>
@@ -22,7 +21,7 @@ export default function HeroSection() {
 
 			<div className="container mx-auto relative z-10">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-					<div className="pt-10 lg:pt-6">
+					<div className="pt-0 lg:pt-0">
 						<h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
 							We Create <br />
 							<span className="gradient-text">
@@ -116,19 +115,19 @@ export default function HeroSection() {
 }
 
 function EnhancedAnimatedLogo() {
-	const containerRef = useRef(null);
-	const canvasRef = useRef(null);
+	const containerRef = useRef<HTMLDivElement>(null);
+	const canvasRef = useRef<HTMLCanvasElement>(null);
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 	const [isHovering, setIsHovering] = useState(false);
-	const [shapes, setShapes] = useState([]);
-	const [connectionLines, setConnectionLines] = useState([]);
-	const [techWords, setTechWords] = useState([]);
+	const [shapes, setShapes] = useState<any[]>([]);
+	const [connectionLines, setConnectionLines] = useState<any[]>([]);
+	const [techWords, setTechWords] = useState<any[]>([]);
 	const [pulseIntensity, setPulseIntensity] = useState(1);
 	const [rotation, setRotation] = useState({ x: 0, y: 0 });
-	const [particles, setParticles] = useState([]);
+	const [particles, setParticles] = useState<any[]>([]);
 	const [logoScale, setLogoScale] = useState(1);
 
-	const handleMouseMove = (e: MouseEvent) => {
+	const handleMouseMove = (e: React.MouseEvent) => {
 		if (!containerRef.current) return;
 
 		const rect = containerRef.current.getBoundingClientRect();
@@ -152,8 +151,6 @@ function EnhancedAnimatedLogo() {
 
 		return () => clearInterval(interval);
 	}, []);
-
-	// Logo breathing effect
 	useEffect(() => {
 		const breatheInterval = setInterval(() => {
 			setLogoScale((prev) => {
@@ -165,7 +162,6 @@ function EnhancedAnimatedLogo() {
 	}, []);
 
 	useEffect(() => {
-		// Create shapes
 		const shapeCount = 30;
 		const newShapes = [];
 
@@ -256,8 +252,8 @@ function EnhancedAnimatedLogo() {
 		generateParticles(10);
 	}, []);
 
-	const generateParticles = (count) => {
-		const newParticles = [];
+	const generateParticles = (count: number) => {
+		const newParticles: any[] = [];
 		for (let i = 0; i < count; i++) {
 			newParticles.push({
 				id: Date.now() + i,
@@ -350,7 +346,7 @@ function EnhancedAnimatedLogo() {
 		resizeCanvas();
 		window.addEventListener("resize", resizeCanvas);
 
-		let animationFrame;
+		let animationFrame: number;
 		const animate = () => {
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 

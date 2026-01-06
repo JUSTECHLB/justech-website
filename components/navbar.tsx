@@ -35,8 +35,7 @@ export default function Navbar() {
 		<>
 		<nav
 			className={cn(
-				"py-6 sticky top-0 left-0 right-0 z-50 transition-all duration-300",
-				mobileMenuOpen || scrolled ? "bg-dark/80 backdrop-blur-md" : "bg-transparent"
+				"py-3 sticky top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark"
 			)}
 		>
 			<div className="container mx-auto flex items-center justify-between">
@@ -102,65 +101,84 @@ export default function Navbar() {
 			</div>
 			</nav>
 
+			{mobileMenuOpen && (
+				<div
+					className="fixed inset-0 bg-dark/95 backdrop-blur-sm z-[60] md:hidden"
+					onClick={() => setMobileMenuOpen(false)}
+				/>
+			)}
+			
 			<div
 				className={cn(
-					"fixed inset-0 bg-dark z-[100] pt-20 px-4 md:hidden transition-transform duration-300 overflow-y-auto",
+					"fixed inset-0 bg-dark z-[60] px-6 pt-6 pb-6 md:hidden transition-transform duration-300 overflow-y-auto flex flex-col",
 					mobileMenuOpen ? "translate-x-0" : "translate-x-full"
 				)}
 			>
-				<button
-					onClick={() => setMobileMenuOpen(false)}
-					className="absolute top-4 right-4 p-2 rounded-full bg-dark-lighter border border-blue/20 hover:border-blue-light transition-colors"
-				>
-					<X className="h-6 w-6" />
-				</button>
+				<div className="flex justify-between items-center mb-8">
+					<Link href="/" className="flex items-center" onClick={() => setMobileMenuOpen(false)}>
+						<div className="relative w-8 h-8 mr-2">
+							<img
+								src="jt.webp"
+								alt="JUSTECH Logo"
+								className="w-full h-full object-contain"
+							/>
+						</div>
+						<span className="text-lg font-bold">JUSTECH</span>
+					</Link>
+					<button
+						onClick={() => setMobileMenuOpen(false)}
+						className="p-2 rounded-full bg-dark-lighter border border-blue/20 hover:border-blue-light transition-colors"
+					>
+						<X className="h-6 w-6" />
+					</button>
+				</div>
 
-				<div className="flex flex-col gap-4">
+				<div className="flex flex-col gap-2 max-w-full flex-1">
 					<Link
 						href="/revenue-scaling"
-						className="py-3 border-b border-blue/10"
+						className="py-3 border-b border-blue/10 hover:text-blue-light transition-colors"
 						onClick={() => setMobileMenuOpen(false)}
 					>
 						Revenue Scaling
 					</Link>
 					<Link
 						href="/business-operation-optimization"
-						className="py-3 border-b border-blue/10"
+						className="py-3 border-b border-blue/10 hover:text-blue-light transition-colors"
 						onClick={() => setMobileMenuOpen(false)}
 					>
 						Business Operation Optimization
 					</Link>
 					<Link
 						href="/tech-transformation"
-						className="py-3 border-b border-blue/10"
+						className="py-3 border-b border-blue/10 hover:text-blue-light transition-colors"
 						onClick={() => setMobileMenuOpen(false)}
 					>
 						Tech Transformation
 					</Link>
 					<Link
 						href="/portfolio"
-						className="py-3 border-b border-blue/10"
+						className="py-3 border-b border-blue/10 hover:text-blue-light transition-colors"
 						onClick={() => setMobileMenuOpen(false)}
 					>
 						Portfolio
 					</Link>
 					<Link
 						href="/blog"
-						className="py-3 border-b border-blue/10"
+						className="py-3 border-b border-blue/10 hover:text-blue-light transition-colors"
 						onClick={() => setMobileMenuOpen(false)}
 					>
 						Blog
 					</Link>
 					<Link
 						href="/about"
-						className="py-3 border-b border-blue/10"
+						className="py-3 border-b border-blue/10 hover:text-blue-light transition-colors"
 						onClick={() => setMobileMenuOpen(false)}
 					>
 						About
 					</Link>
 					<Link
 						href="/contact"
-						className="mt-4"
+						className="mt-4 block"
 						onClick={() => setMobileMenuOpen(false)}
 					>
 						<Button className="bg-gradient-to-r from-blue to-indigo hover:opacity-90 text-white w-full rounded-full">
