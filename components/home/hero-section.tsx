@@ -8,7 +8,7 @@ import { useEffect, useState, useRef } from "react";
 
 export default function HeroSection() {
 	return (
-		<section className="relative min-h-[80vh] md:min-h-[88vh] flex items-start overflow-hidden py-8 md:py-10 bg-dark">
+		<section className="relative min-h-[80vh] md:min-h-[88vh] flex items-start overflow-hidden pt-24 md:pt-36 pb-8 md:pb-10 bg-dark">
 			<div className="absolute inset-0 bg-dark z-0"></div>
 			<div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue/10 rounded-full blur-[120px] -z-10"></div>
 			<div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo/10 rounded-full blur-[100px] -z-10"></div>
