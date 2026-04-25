@@ -549,20 +549,9 @@ export default function ServicesPage() {
                     <div className="absolute bottom-0 left-0 h-[2px] w-full bg-gradient-to-r from-transparent via-blue-500/50 to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
 
                     <div className="relative z-10">
-                      <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-white/10 bg-white/5 text-2xl font-semibold text-white">
-                        {item.step}
-                      </div>
-
-                      <div className="mb-5 flex items-center gap-2 opacity-70">
-                        <div className="h-2 w-2 rounded-full bg-blue-400 animate-pulse" />
-                        <div className="h-2 w-2 rounded-full bg-blue-400 animate-pulse delay-150" />
-                        <div className="h-2 w-2 rounded-full bg-blue-400 animate-pulse delay-300" />
-                      </div>
-
-                      <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl border border-blue/10 bg-gradient-to-r from-blue/15 to-indigo/20">
-                        <Icon className="h-5 w-5 text-blue-light" />
-                      </div>
-
+                    <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl border border-blue/10 bg-gradient-to-r from-blue/15 to-indigo/20">
+                           <Icon className="h-7 w-7 text-blue-light" />
+                    </div>
                       <h3 className="mb-4 text-2xl font-semibold transition group-hover:text-blue-light">
                         {item.title}
                       </h3>
