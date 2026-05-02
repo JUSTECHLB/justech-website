@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import services from "@/content/services.json";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ServiceCard from "@/components/service-card";
@@ -8,8 +9,8 @@ import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 
 export default function ServicesSection() {
-	const [activeIndex, setActiveIndex] = useState(null);
-	const containerRef = useRef(null);
+	const [activeIndex, setActiveIndex] = useState<number | null>(null);
+	const containerRef = useRef<HTMLElement | null>(null);
 	const [isInView, setIsInView] = useState(false);
 
 	useEffect(() => {
@@ -31,45 +32,7 @@ export default function ServicesSection() {
 		};
 	}, []);
 
-	const services = [
-		{
-			title: "Revenue Scaling",
-			description:
-				"Strategic approaches to increase your business revenue through digital transformation and market expansion.",
-			icon: "trending-up",
-			link: "/revenue-scaling",
-		},
-		{
-			title: "Operational Optimization",
-			description:
-				"Streamline your business processes and organizational structure for maximum efficiency and productivity.",
-			icon: "layers",
-		},
-		{
-			title: "Workflow Automation",
-			description:
-				"Implement automated solutions that reduce manual tasks and increase operational efficiency.",
-			icon: "zap",
-		},
-		{
-			title: "Digital Transformation",
-			description:
-				"Comprehensive digital strategies to modernize your business and stay ahead of the competition.",
-			icon: "code",
-		},
-		{
-			title: "Custom Software Development",
-			description:
-				"Tailored software solutions designed to address your specific business challenges and goals.",
-			icon: "database",
-		},
-		{
-			title: "Cloud Infrastructure",
-			description:
-				"Scalable and secure cloud solutions to support your growing business needs and requirements.",
-			icon: "cloud",
-		},
-	];
+	
 
 	const containerVariants = {
 		hidden: { opacity: 0 },
@@ -120,7 +83,7 @@ export default function ServicesSection() {
 			>
 				<motion.div
 					className="text-center mb-16"
-					variants={titleVariants}
+					variants={titleVariants as any}
 				>
 					<h2 className="text-3xl md:text-5xl font-bold mb-6">
 						Our{" "}
@@ -141,7 +104,7 @@ export default function ServicesSection() {
 					{services.map((service, index) => (
 						<motion.div
 							key={index}
-							variants={itemVariants}
+							variants={itemVariants as any}
 							whileHover={{
 								scale: 1.03,
 								transition: { duration: 0.2 },
@@ -172,7 +135,7 @@ export default function ServicesSection() {
 
 				<motion.div
 					className="text-center mt-12"
-					variants={itemVariants}
+					variants={itemVariants as any}
 					initial={{ opacity: 0, y: 20 }}
 					animate={
 						isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
