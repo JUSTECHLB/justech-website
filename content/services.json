@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Revenue Scaling",
+    "description": "Strategic approaches to increase your business revenue through digital transformation and market expansion.",
+    "icon": "trending-up",
+    "link": "/revenue-scaling"
+  },
+  {
+    "title": "Operational Optimization",
+    "description": "Streamline your business processes and organizational structure for maximum efficiency and productivity.",
+    "icon": "layers"
+  },
+  {
+    "title": "Workflow Automation",
+    "description": "Implement automated solutions that reduce manual tasks and increase operational efficiency.",
+    "icon": "zap"
+  },
+  {
+    "title": "Digital Transformation",
+    "description": "Comprehensive digital strategies to modernize your business and stay ahead of the competition.",
+    "icon": "code"
+  },
+  {
+    "title": "Custom Software Development",
+    "description": "Tailored software solutions designed to address your specific business challenges and goals.",
+    "icon": "database"
+  },
+  {
+    "title": "Cloud Infrastructure",
+    "description": "Scalable and secure cloud solutions to support your growing business needs and requirements.",
+    "icon": "cloud"
+  }
+]

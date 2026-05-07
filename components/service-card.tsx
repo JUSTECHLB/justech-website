@@ -23,12 +23,14 @@ interface ServiceCardProps {
 	title: string;
 	description: string;
 	icon: string;
+	isActive?: boolean;
 }
 
 export default function ServiceCard({
 	title,
 	description,
 	icon,
+	isActive = false,
 }: ServiceCardProps) {
 	const [isHovering, setIsHovering] = useState(false);
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -80,7 +82,9 @@ export default function ServiceCard({
 	return (
 		<div
 			ref={cardRef}
-			className="gradient-border p-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-blue/10 hover:-translate-y-2 group card-hover-gradient relative overflow-hidden"
+			className={`gradient-border p-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-blue/10 hover:-translate-y-2 group card-hover-gradient relative overflow-hidden ${
+				isActive ? "shadow-lg shadow-blue/10 -translate-y-2" : ""
+			}`}
 			onMouseEnter={() => setIsHovering(true)}
 			onMouseLeave={() => setIsHovering(false)}
 			onMouseMove={handleMouseMove}
