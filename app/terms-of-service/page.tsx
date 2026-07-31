@@ -1,7 +1,16 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+	title: "Terms of Service",
+	description:
+		"The terms that apply when you use the JUSTECH website and services.",
+	path: "/terms-of-service",
+});
 
 export default function TermsOfServicePage() {
 	return (
@@ -17,8 +26,8 @@ export default function TermsOfServicePage() {
 					</p>
 				</div>
 
-				<div className="gradient-border p-8 rounded-2xl mb-12">
-					<div className="prose prose-lg prose-invert max-w-none">
+				<div className="gradient-border p-6 sm:p-8 rounded-2xl mb-12">
+					<div className="prose prose-base sm:prose-lg prose-invert max-w-none break-words [overflow-wrap:anywhere]">
 						<h2 className="text-2xl font-bold mt-8 mb-4 gradient-text">
 							OVERVIEW
 						</h2>

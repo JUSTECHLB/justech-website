@@ -1,33 +1,26 @@
 [
   {
     "title": "Revenue Scaling",
-    "description": "Strategic approaches to increase your business revenue through digital transformation and market expansion.",
+    "quote": "We're getting traffic but no enquiries.",
+    "description": "Websites, SEO, and e-commerce built to convert. Plus the AI layer on top: chatbots that capture leads, scoring that tells your sales team who's worth calling.",
+    "measured": "Qualified leads per month, conversion rate.",
     "icon": "trending-up",
     "link": "/revenue-scaling"
   },
   {
-    "title": "Operational Optimization",
-    "description": "Streamline your business processes and organizational structure for maximum efficiency and productivity.",
-    "icon": "layers"
+    "title": "Business Operation Optimization",
+    "quote": "My team is drowning in manual work.",
+    "description": "Odoo implementation, workflow automation, internal systems, and dashboards. Where AI does the most useful work in a business: reading documents, routing tickets, forecasting demand.",
+    "measured": "Hours saved per week, error rate.",
+    "icon": "layers",
+    "link": "/business-operation-optimization"
   },
   {
-    "title": "Workflow Automation",
-    "description": "Implement automated solutions that reduce manual tasks and increase operational efficiency.",
-    "icon": "zap"
-  },
-  {
-    "title": "Digital Transformation",
-    "description": "Comprehensive digital strategies to modernize your business and stay ahead of the competition.",
-    "icon": "code"
-  },
-  {
-    "title": "Custom Software Development",
-    "description": "Tailored software solutions designed to address your specific business challenges and goals.",
-    "icon": "database"
-  },
-  {
-    "title": "Cloud Infrastructure",
-    "description": "Scalable and secure cloud solutions to support your growing business needs and requirements.",
-    "icon": "cloud"
+    "title": "Tech Transformation",
+    "quote": "Our system is old and can't handle growth.",
+    "description": "AWS migration, DevOps, legacy modernization, custom applications, microservices, and machine learning infrastructure.",
+    "measured": "Uptime, load capacity, infrastructure cost.",
+    "icon": "cloud",
+    "link": "/tech-transformation"
   }
 ]

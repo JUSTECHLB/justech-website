@@ -66,7 +66,7 @@ export default function OperationalAreas() {
 					id: "crm-integration",
 					name: "CRM Integration",
 					description:
-						"Seamless connection of your CRM with existing business systems",
+						"Direct connection of your CRM to existing business systems",
 					pros: [
 						"Unified data ecosystem",
 						"Reduced manual data entry",
@@ -376,7 +376,7 @@ export default function OperationalAreas() {
 					id: "analytics-platform",
 					name: "Marketing Analytics Platform",
 					description:
-						"Comprehensive tracking and analysis of all marketing activities",
+						"Tracking and analysis of all marketing activities",
 					pros: [
 						"ROI visibility",
 						"Channel performance insights",

@@ -52,7 +52,7 @@ export default function TechCaseStudies() {
 		{
 			title: "Financial Services Cybersecurity Enhancement",
 			description:
-				"Implemented comprehensive cybersecurity solutions for a financial services firm, protecting sensitive data and ensuring regulatory compliance.",
+				"Implemented cybersecurity solutions for a financial services firm, protecting sensitive data and ensuring regulatory compliance.",
 			image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
 			results: [
 				"Zero security breaches post-implementation",

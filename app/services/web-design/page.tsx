@@ -1,307 +1,237 @@
-import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle } from "lucide-react";
+import {
+	Accessibility,
+	ArrowRight,
+	Gauge,
+	Palette,
+	Search,
+	Smartphone,
+	Sparkles,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import PageHero from "@/components/marketing/page-hero";
+import Reveal from "@/components/marketing/reveal";
+import SpecList from "@/components/marketing/spec-list";
+import { pageMetadata } from "@/lib/seo";
+import { discoveryLinkProps } from "@/lib/links";
+import JsonLd from "@/components/seo/json-ld";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
+
+export const metadata: Metadata = pageMetadata({
+	title: "Website Design in Lebanon",
+	description:
+		"Website design and development for businesses in Lebanon and MENA. Responsive, fast, and built so visitors can tell what you do in five seconds.",
+	path: "/services/web-design",
+});
+
+const features = [
+	{
+		icon: Smartphone,
+		title: "Responsive by default",
+		body: "One layout that holds up from a 320px phone to a 27 inch monitor. Tested at every size rather than checked once in a browser window.",
+	},
+	{
+		icon: Search,
+		title: "Structured for search",
+		body: "Clean markup, real heading hierarchy, fast server-rendered pages, and metadata that describes the page rather than the company.",
+	},
+	{
+		icon: Gauge,
+		title: "Fast on a bad connection",
+		body: "Compressed images, minimal client-side JavaScript, and a page that renders before the network finishes. Speed is a conversion feature in Lebanon.",
+	},
+	{
+		icon: Sparkles,
+		title: "Built around one action",
+		body: "Every page has a job. We decide what a visitor should do next and remove the things competing with it.",
+	},
+	{
+		icon: Palette,
+		title: "Consistent with your brand",
+		body: "Colour, type, and imagery applied as a system, so the site still looks like you on the pages we did not design.",
+	},
+	{
+		icon: Accessibility,
+		title: "Usable by everyone",
+		body: "Contrast that passes, targets big enough to hit on a phone, keyboard navigation that works, and motion that respects the reduced-motion setting.",
+	},
+];
 
 export default function WebDesignPage() {
 	return (
-		<main className="min-h-screen bg-[#002333] text-white">
-			<section className="container mx-auto py-20 text-center">
-				<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#4ECDC4] mb-6">
-					Web Design
-				</h1>
-				<p className="text-xl mb-10 max-w-3xl mx-auto">
-					Custom, responsive web designs that captivate your audience
-					and reflect your brand identity.
-				</p>
+		<main className="min-h-screen bg-dark text-white">
+			<JsonLd
+				schema={serviceSchema({
+					name: "Website Design",
+					description:
+						"Website design and development for businesses in Lebanon and MENA.",
+					path: "/services/web-design",
+					serviceType: "Website design",
+				})}
+				id="schema-service"
+			/>
+			<JsonLd
+				schema={breadcrumbSchema([
+					{ name: "Home", path: "/" },
+					{ name: "Services", path: "/services" },
+					{ name: "Website Design", path: "/services/web-design" },
+				])}
+				id="schema-breadcrumb"
+			/>
+
+			<PageHero
+				eyebrow="Website Design"
+				title={
+					<>
+						A site that says what you do in{" "}
+						<span className="gradient-text">five seconds</span>.
+					</>
+				}
+				lede="Website design for businesses in Lebanon and across MENA. Responsive, fast, and structured so a visitor knows what you do and what to do next before they scroll."
+				orbit={{
+					icon: <Palette className="w-8 h-8 text-blue-light" />,
+					title: "Web Design",
+					subtitle: "Clarity over decoration",
+				}}
+			/>
+
+			<section className="py-20 relative overflow-hidden">
+				<div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-indigo/10 rounded-full blur-[120px] -z-10"></div>
+
+				<div className="container mx-auto">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+						<SpecList
+							heading="You probably need this if"
+							items={[
+								"People land on the site and cannot tell what you sell",
+								"It looks fine on your laptop and falls apart on a phone",
+								"Pages take a few seconds to appear on mobile data",
+								"There is no obvious next step on any page",
+								"The design was done once, years ago, and has been patched since",
+								"You are embarrassed to send the link to a serious prospect",
+							]}
+						/>
+
+						<Reveal delay={0.1}>
+							<h2 className="text-sm font-semibold uppercase tracking-widest text-blue-light mb-6">
+								How we measure it
+							</h2>
+							<p className="text-lg text-gray-300 mb-8">
+								Qualified enquiries per month. Conversion rate.
+								Bounce rate on mobile. Time to first
+								contentful paint. Whether a stranger can
+								describe your business after five seconds on the
+								page.
+							</p>
+							<p className="text-gray-400">
+								Design work that cannot move one of those is
+								decoration, and we will tell you so rather than
+								bill you for it.
+							</p>
+						</Reveal>
+					</div>
+				</div>
 			</section>
 
-			<section className="container mx-auto py-16">
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-					<div>
-						<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-6">
-							Stunning Web Design Solutions
+			<section className="py-20 relative bg-dark-lighter overflow-hidden">
+				<div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue/10 rounded-full blur-[120px] -z-10"></div>
+
+				<div className="container mx-auto">
+					<Reveal>
+						<h2 className="text-3xl md:text-4xl font-bold mb-12">
+							What you actually{" "}
+							<span className="gradient-text">get</span>
 						</h2>
-						<p className="text-lg leading-relaxed mb-4">
-							At JUSTECH, we believe that great web design is the
-							perfect blend of aesthetics and functionality. Our
-							team of skilled designers creates visually appealing
-							websites that not only look great but also deliver
-							an exceptional user experience.
-						</p>
-						<p className="text-lg leading-relaxed mb-4">
-							We focus on creating responsive designs that work
-							seamlessly across all devices, ensuring your website
-							looks and performs perfectly whether viewed on a
-							desktop, tablet, or smartphone.
-						</p>
-						<p className="text-lg leading-relaxed">
-							Our design process is collaborative, and we work
-							closely with you to understand your brand, goals,
-							and target audience to create a website that truly
-							represents your business and connects with your
-							customers.
-						</p>
-					</div>
-					<div className="relative">
-						<div className="bg-gray-300 rounded-3xl overflow-hidden relative">
-							<Image
-								src="https://justechlb.com/wp-content/uploads/2023/10/web-design.jpg"
-								alt="Web Design"
-								width={600}
-								height={600}
-								className="object-cover"
-							/>
-						</div>
+					</Reveal>
+
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+						{features.map((feature, index) => (
+							<Reveal
+								key={feature.title}
+								delay={Math.min(index * 0.06, 0.3)}
+								className="h-full"
+							>
+								<div className="h-full gradient-border rounded-2xl p-8 bg-dark group card-hover-gradient transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-blue/10">
+									<div className="w-14 h-14 rounded-2xl bg-dark-lighter border border-blue/20 flex items-center justify-center mb-6 transition-all duration-300 group-hover:border-blue-light group-hover:scale-105">
+										<feature.icon className="w-7 h-7 text-blue-light" />
+									</div>
+									<h3 className="text-xl font-semibold mb-3">
+										{feature.title}
+									</h3>
+									<p className="text-gray-400 group-hover:text-gray-200">
+										{feature.body}
+									</p>
+								</div>
+							</Reveal>
+						))}
 					</div>
 				</div>
 			</section>
 
-			<section className="container mx-auto py-16 bg-[#00314a] rounded-xl p-10">
-				<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-10 text-center">
-					Our Web Design Features
-				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<h3 className="text-xl font-semibold mb-4">
-							Responsive Design
-						</h3>
-						<p className="text-gray-300">
-							Our websites adapt seamlessly to all screen sizes,
-							ensuring an optimal viewing experience across all
-							devices.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<h3 className="text-xl font-semibold mb-4">
-							User-Centered Design
-						</h3>
-						<p className="text-gray-300">
-							We create intuitive interfaces that enhance user
-							experience and make navigation effortless.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<h3 className="text-xl font-semibold mb-4">
-							Brand Consistency
-						</h3>
-						<p className="text-gray-300">
-							We ensure your website reflects your brand identity
-							through consistent use of colors, typography, and
-							imagery.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<h3 className="text-xl font-semibold mb-4">
-							SEO-Friendly Structure
-						</h3>
-						<p className="text-gray-300">
-							Our designs are built with search engine
-							optimization in mind to improve your visibility
-							online.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<h3 className="text-xl font-semibold mb-4">
-							Fast Loading Times
-						</h3>
-						<p className="text-gray-300">
-							We optimize images and code to ensure your website
-							loads quickly, reducing bounce rates.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<h3 className="text-xl font-semibold mb-4">
-							Accessibility
-						</h3>
-						<p className="text-gray-300">
-							We follow accessibility best practices to ensure
-							your website is usable by people of all abilities.
-						</p>
+			<section className="py-20 relative">
+				<div className="container mx-auto">
+					<Reveal>
+						<h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+							How a build{" "}
+							<span className="gradient-text">actually runs</span>
+						</h2>
+					</Reveal>
+					<div className="max-w-3xl mx-auto">
+						<SpecList
+							heading="Sequence"
+							numbered
+							items={[
+								"Discovery. Your business, your buyers, what your competitors already say, and which number the site is meant to move.",
+								"Structure. Sitemap and wireframes first, so we argue about the content and the flow before anything looks pretty.",
+								"Copy. Written or edited before design, because designing around placeholder text produces layouts that break on the real thing.",
+								"Design. Visual system applied to the real structure and the real words, at mobile and desktop together.",
+								"Build. Server-rendered, responsive, and fast, with the CMS or editing setup you asked for.",
+								"Launch and measure. Analytics and conversion tracking wired up on day one, so the next round of changes is based on data.",
+							]}
+						/>
 					</div>
 				</div>
 			</section>
 
-			<section className="container mx-auto py-16">
-				<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-10 text-center">
-					Our Design Process
-				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					<div className="bg-[#003a4f] p-6 rounded-xl relative">
-						<div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#4ECDC4] flex items-center justify-center text-[#002333] font-bold text-xl">
-							1
-						</div>
-						<h3 className="text-xl font-semibold mb-2 mt-4">
-							Discovery
-						</h3>
-						<p className="text-gray-300">
-							We learn about your business, goals, target
-							audience, and competitors to inform our design
-							strategy.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl relative">
-						<div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#4ECDC4] flex items-center justify-center text-[#002333] font-bold text-xl">
-							2
-						</div>
-						<h3 className="text-xl font-semibold mb-2 mt-4">
-							Wireframing
-						</h3>
-						<p className="text-gray-300">
-							We create wireframes to establish the layout and
-							structure of your website before adding visual
-							elements.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl relative">
-						<div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#4ECDC4] flex items-center justify-center text-[#002333] font-bold text-xl">
-							3
-						</div>
-						<h3 className="text-xl font-semibold mb-2 mt-4">
-							Design
-						</h3>
-						<p className="text-gray-300">
-							We develop the visual design, incorporating your
-							brand elements and creating a cohesive look and
-							feel.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl relative">
-						<div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#4ECDC4] flex items-center justify-center text-[#002333] font-bold text-xl">
-							4
-						</div>
-						<h3 className="text-xl font-semibold mb-2 mt-4">
-							Refinement
-						</h3>
-						<p className="text-gray-300">
-							We gather your feedback and make revisions to ensure
-							the design meets your expectations.
-						</p>
-					</div>
-				</div>
-			</section>
+			<section className="py-24 relative">
+				<div className="absolute inset-0 gradient-bg rounded-3xl mx-4 md:mx-12 -z-10"></div>
+				<div className="absolute inset-0 grid-pattern opacity-10 rounded-3xl mx-4 md:mx-12 -z-10"></div>
 
-			<section className="container mx-auto py-16 bg-[#00314a] rounded-xl p-10">
-				<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-10 text-center">
-					Web Design Portfolio
-				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					{[1, 2, 3].map((item) => (
-						<div
-							key={item}
-							className="bg-[#003a4f] rounded-xl overflow-hidden group"
+				<Reveal className="container mx-auto py-16 text-center">
+					<h2 className="text-3xl md:text-5xl font-bold mb-6">
+						Send us the site that isn't{" "}
+						<span className="gradient-text">working</span>.
+					</h2>
+					<p className="text-xl mb-10 max-w-2xl mx-auto">
+						Part of{" "}
+						<Link
+							href="/revenue-scaling"
+							className="underline underline-offset-4"
 						>
-							<div className="relative h-64">
-								<Image
-									src={`https://justechlb.com/wp-content/uploads/2023/10/web-design-${item}.jpg`}
-									alt={`Web Design Project ${item}`}
-									fill
-									className="object-cover transition-transform duration-300 group-hover:scale-105"
-								/>
-							</div>
-							<div className="p-6">
-								<h3 className="text-xl font-semibold mb-2">
-									Design Project {item}
-								</h3>
-								<p className="text-gray-300 mb-4">
-									UI/UX Design, Branding
-								</p>
-								<Link href={`/portfolio/web-design-${item}`}>
-									<Button
-										variant="link"
-										className="text-[#4ECDC4] p-0 hover:text-[#3dbdb5]"
-									>
-										View Project
-									</Button>
-								</Link>
-							</div>
-						</div>
-					))}
-				</div>
-				<div className="text-center mt-10">
-					<Link href="/portfolio">
-						<Button className="bg-[#4ECDC4] hover:bg-[#3dbdb5] text-white">
-							View More Projects
+							revenue scaling
+						</Link>
+						. See the{" "}
+						<Link
+							href="/portfolio"
+							className="underline underline-offset-4"
+						>
+							work we have shipped
+						</Link>
+						, then book a short call and we will tell you what is
+						costing you enquiries.
+					</p>
+					<Link
+						{...discoveryLinkProps}
+						className="inline-block w-full sm:w-auto"
+					>
+						<Button className="bg-white text-dark hover:bg-gray-100 w-full sm:w-auto whitespace-normal px-6 sm:px-8 py-6 text-base sm:text-lg h-auto rounded-full group transition-transform duration-300 hover:scale-105">
+							Book a discovery call
+							<ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
 						</Button>
 					</Link>
-				</div>
-			</section>
-
-			<section className="container mx-auto py-16">
-				<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-10 text-center">
-					Benefits of Professional Web Design
-				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-					<div className="flex items-start gap-4">
-						<CheckCircle className="w-6 h-6 text-[#4ECDC4] mt-1" />
-						<div>
-							<h3 className="text-xl font-semibold mb-2">
-								Enhanced Brand Credibility
-							</h3>
-							<p className="text-gray-300">
-								A professionally designed website builds trust
-								and credibility with your audience, making them
-								more likely to engage with your business.
-							</p>
-						</div>
-					</div>
-					<div className="flex items-start gap-4">
-						<CheckCircle className="w-6 h-6 text-[#4ECDC4] mt-1" />
-						<div>
-							<h3 className="text-xl font-semibold mb-2">
-								Improved User Experience
-							</h3>
-							<p className="text-gray-300">
-								Intuitive navigation and thoughtful design
-								elements enhance user experience, leading to
-								longer visit durations and higher conversion
-								rates.
-							</p>
-						</div>
-					</div>
-					<div className="flex items-start gap-4">
-						<CheckCircle className="w-6 h-6 text-[#4ECDC4] mt-1" />
-						<div>
-							<h3 className="text-xl font-semibold mb-2">
-								Mobile Optimization
-							</h3>
-							<p className="text-gray-300">
-								With more users accessing websites on mobile
-								devices, responsive design ensures your site
-								performs well across all platforms.
-							</p>
-						</div>
-					</div>
-					<div className="flex items-start gap-4">
-						<CheckCircle className="w-6 h-6 text-[#4ECDC4] mt-1" />
-						<div>
-							<h3 className="text-xl font-semibold mb-2">
-								Better Search Engine Rankings
-							</h3>
-							<p className="text-gray-300">
-								Well-designed websites with clean code and
-								optimized structure tend to rank higher in
-								search engine results.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section className="container mx-auto py-16 text-center">
-				<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-6">
-					Ready to Transform Your Website?
-				</h2>
-				<p className="text-xl mb-10 max-w-3xl mx-auto">
-					Contact us today to discuss your web design project and get
-					a free consultation.
-				</p>
-				<Link href="/contact">
-					<Button className="bg-[#4ECDC4] hover:bg-[#3dbdb5] text-white px-6 py-6 text-lg h-auto">
-						Get A Free Consultation
-					</Button>
-				</Link>
+				</Reveal>
 			</section>
 		</main>
 	);

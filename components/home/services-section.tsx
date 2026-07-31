@@ -72,7 +72,7 @@ export default function ServicesSection() {
 	};
 
 	return (
-		<section id="services" className="py-24 relative" ref={containerRef}>
+		<section id="services" className="py-24 relative overflow-hidden" ref={containerRef}>
 			<div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-indigo/10 rounded-full blur-[100px] -z-10"></div>
 
 			<motion.div
@@ -86,14 +86,15 @@ export default function ServicesSection() {
 					variants={titleVariants as any}
 				>
 					<h2 className="text-3xl md:text-5xl font-bold mb-6">
-						Our{" "}
+						Three problems,{" "}
 						<span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">
-							Services
+							three answers
 						</span>
+						.
 					</h2>
 					<p className="text-xl text-gray-400 max-w-2xl mx-auto">
-						We offer a comprehensive range of solutions to help your
-						business scale revenue and optimize operations.
+						Most clients arrive with one of them. Some end up with
+						all three.
 					</p>
 				</motion.div>
 
@@ -104,6 +105,7 @@ export default function ServicesSection() {
 					{services.map((service, index) => (
 						<motion.div
 							key={index}
+							className="h-full"
 							variants={itemVariants as any}
 							whileHover={{
 								scale: 1.03,
@@ -113,10 +115,12 @@ export default function ServicesSection() {
 							onHoverEnd={() => setActiveIndex(null)}
 						>
 							{service.link ? (
-								<Link href={service.link}>
+								<Link href={service.link} className="block h-full">
 									<ServiceCard
 										title={service.title}
+										quote={service.quote}
 										description={service.description}
+										measured={service.measured}
 										icon={service.icon}
 										isActive={activeIndex === index}
 									/>
@@ -124,7 +128,9 @@ export default function ServicesSection() {
 							) : (
 								<ServiceCard
 									title={service.title}
+									quote={service.quote}
 									description={service.description}
+									measured={service.measured}
 									icon={service.icon}
 									isActive={activeIndex === index}
 								/>

@@ -30,7 +30,7 @@ export default function TransformationApproach() {
 			icon: <PenTool className="h-6 w-6 text-indigo" />,
 			title: "Strategy & Roadmap",
 			description:
-				"We develop a comprehensive transformation strategy and implementation roadmap tailored to your specific needs and priorities.",
+				"We develop a transformation strategy and implementation roadmap tailored to your specific needs and priorities.",
 			color: "from-indigo/20 to-violet/20",
 		},
 		{

@@ -1,57 +1,38 @@
-import Image from "next/image";
+// TODO (needs copy from JUSTECH): one specific line per partner describing what
+// they actually do with us. Fill in `description` below. Cards render the name
+// alone until real copy lands, rather than repeating a generic line three times.
+const partners = [
+	{ name: "Astroly", description: "" },
+	{ name: "Devancy", description: "" },
+	{ name: "CCLab", description: "" },
+];
 
 export default function PartnersSection() {
-	const partners = [
-		{
-			name: "Astroly",
-			image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop",
-		},
-		{
-			name: "Devancy",
-			image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop",
-		},
-		{
-			name: "CCLab",
-			image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2032&auto=format&fit=crop",
-		},
-	];
-
 	return (
-		<section className="py-24 relative">
+		<section className="py-24 relative overflow-hidden">
 			<div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo/10 rounded-full blur-[100px] -z-10"></div>
 
 			<div className="container mx-auto">
 				<div className="text-center mb-16">
-					<h2 className="text-3xl md:text-5xl font-bold mb-6">
-						Our <span className="gradient-text">Partners</span>
+					<h2 className="text-3xl md:text-5xl font-bold">
+						<span className="gradient-text">Partners</span>
 					</h2>
-					<p className="text-xl text-gray-400 max-w-2xl mx-auto">
-						We collaborate with industry leaders to deliver
-						comprehensive solutions for our clients.
-					</p>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-					{partners.map((partner, index) => (
+					{partners.map((partner) => (
 						<div
-							key={index}
+							key={partner.name}
 							className="gradient-border p-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-blue/10 hover:-translate-y-2 group card-hover-gradient"
 						>
-							<div className="w-full h-48 mx-auto mb-6 relative rounded-xl overflow-hidden">
-								<Image
-									src={partner.image}
-									alt={partner.name}
-									fill
-									className="object-cover"
-								/>
-							</div>
-							<h3 className="text-2xl font-semibold mb-3 group-hover:text-white">
+							<h3 className="text-2xl font-semibold group-hover:text-white">
 								{partner.name}
 							</h3>
-							<p className="text-gray-400 group-hover:text-gray-200">
-								Strategic partner providing specialized
-								expertise and complementary services.
-							</p>
+							{partner.description && (
+								<p className="text-gray-400 group-hover:text-gray-200 mt-3">
+									{partner.description}
+								</p>
+							)}
 						</div>
 					))}
 				</div>

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Fingerprint, Lightbulb, Users, BarChart4 } from "lucide-react";
+import { discoveryLinkProps } from "@/lib/links";
 
 export default function UniqueSellingPoints() {
 	const uspItems = [
@@ -102,18 +103,18 @@ export default function UniqueSellingPoints() {
 					<div className="flex flex-col md:flex-row items-center justify-between">
 						<div className="mb-6 md:mb-0 md:mr-8">
 							<h3 className="text-2xl font-bold mb-2">
-								Ready to transform your operations?
+								Not sure where the hours are going?
 							</h3>
 							<p className="text-gray-300">
-								Schedule a free consultation to discover your
-								optimization potential.
+								A short call, no charge, and a straight answer on
+								what is worth automating.
 							</p>
 						</div>
 						<a
-							href="/contact"
+							{...discoveryLinkProps}
 							className="px-6 py-3 bg-gradient-to-r from-blue to-indigo rounded-lg font-medium hover:shadow-lg transition-all duration-300 whitespace-nowrap"
 						>
-							Get Started
+							Book a discovery call
 						</a>
 					</div>
 				</motion.div>

@@ -16,6 +16,16 @@
     @apply bg-dark text-white;
   }
 
+  /* Decorative blur orbs are absolutely positioned at fixed pixel widths
+     (w-[500px], w-[800px]) inside sections that do not clip. Below ~500px
+     viewport they push the page wider than the screen and phones get a
+     sideways scroll. `clip` rather than `hidden`: clip does not create a
+     scroll container, so the sticky navbar keeps working. */
+  html,
+  body {
+    overflow-x: clip;
+  }
+
   /* Hide scrollbar for Chrome, Safari and Opera */
   body::-webkit-scrollbar,
   *::-webkit-scrollbar {
@@ -295,11 +305,23 @@
   }
 }
 
-main.chat-layout.chat-wrapper textarea {
-    color: black !important;
-}
+/* Decorative CSS animations (orbits, floats, pulses) are motion for its own
+   sake. Framer Motion is handled by MotionConfig reducedMotion="user"; these
+   keyframe classes need the media query. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-random,
+  .animate-spin-slow,
+  .animate-reverse-spin,
+  .animate-ping-slow,
+  .animate-particle-burst,
+  .animate-data-flow,
+  .animate-marquee,
+  .animated-gradient {
+    animation: none !important;
+  }
 
-.chat-window-wrapper .chat-window-toggle,
-.chat-layout .chat-header{
-    background-image: linear-gradient(to right, rgb(34, 139, 230)) !important;
+  html {
+    scroll-behavior: auto;
+  }
 }

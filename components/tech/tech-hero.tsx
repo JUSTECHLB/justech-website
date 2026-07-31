@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { discoveryLinkProps } from "@/lib/links";
 
 export default function TechHero() {
 	const [isLoaded, setIsLoaded] = useState(false);
@@ -57,7 +58,7 @@ export default function TechHero() {
 				icon: <Layout className="h-6 w-6 text-red-400" />,
 			},
 			after: {
-				title: "Seamless UI/UX",
+				title: "Rebuilt UI/UX",
 				icon: <Layout className="h-6 w-6 text-green-400" />,
 			},
 		},
@@ -619,17 +620,17 @@ export default function TechHero() {
 							<span className="inline-block py-1 px-3 rounded-full text-sm font-medium bg-gradient-to-r from-blue/20 to-indigo/20 text-blue border border-blue/20 mb-4">
 								Tech Transformation
 							</span>
-							<h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-								Reveal Your <br />
+							<h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+								Infrastructure that survives <br />
 								<span className="gradient-text">
-									Digital Evolution
+									your next growth stage.
 								</span>
 							</h1>
 							<p className="text-xl text-gray-400 mb-10 max-w-xl">
-								Transform your business with cutting-edge
-								technology solutions that drive innovation,
-								efficiency, and competitive advantage in today's
-								rapidly evolving digital landscape.
+								Systems don't fail gradually. They work until the
+								day the load doubles, the developer who built it
+								leaves, or someone asks a security question
+								nobody can answer.
 							</p>
 						</motion.div>
 
@@ -639,18 +640,10 @@ export default function TechHero() {
 							transition={{ duration: 0.5, delay: 0.2 }}
 							className="flex flex-col sm:flex-row gap-4 mb-8"
 						>
-							<Link href="/contact">
-								<Button className="bg-gradient-to-r from-blue to-indigo hover:opacity-90 text-white px-8 py-6 text-lg h-auto rounded-full">
-									Start Your Transformation
+							<Link {...discoveryLinkProps} className="inline-block w-full sm:w-auto">
+								<Button className="bg-gradient-to-r from-blue to-indigo hover:opacity-90 text-white w-full sm:w-auto whitespace-normal px-6 sm:px-8 py-6 text-base sm:text-lg h-auto rounded-full">
+									Book a discovery call
 									<ArrowRight className="ml-2 h-5 w-5" />
-								</Button>
-							</Link>
-							<Link href="#case-studies">
-								<Button
-									variant="outline"
-									className="border-blue/20 hover:bg-dark-lighter text-white px-8 py-6 text-lg h-auto rounded-full"
-								>
-									View Success Stories
 								</Button>
 							</Link>
 						</motion.div>
@@ -662,27 +655,27 @@ export default function TechHero() {
 							transition={{ duration: 0.5, delay: 0.4 }}
 						>
 							<div className="bg-dark-lighter/50 backdrop-blur-sm border border-gray-800 rounded-xl p-4">
-								<p className="text-gray-400 text-sm">
-									Average ROI
+								<p className="text-xs font-semibold uppercase tracking-widest text-blue-light mb-2">
+									We measure
 								</p>
-								<p className="text-3xl font-bold text-white">
-									320%
-								</p>
-							</div>
-							<div className="bg-dark-lighter/50 backdrop-blur-sm border border-gray-800 rounded-xl p-4">
-								<p className="text-gray-400 text-sm">
-									Implementation
-								</p>
-								<p className="text-3xl font-bold text-white">
-									4-8 wks
+								<p className="text-lg font-semibold text-white">
+									Uptime
 								</p>
 							</div>
 							<div className="bg-dark-lighter/50 backdrop-blur-sm border border-gray-800 rounded-xl p-4">
-								<p className="text-gray-400 text-sm">
-									Success Rate
+								<p className="text-xs font-semibold uppercase tracking-widest text-blue-light mb-2">
+									We measure
 								</p>
-								<p className="text-3xl font-bold text-white">
-									98.5%
+								<p className="text-lg font-semibold text-white">
+									Load capacity
+								</p>
+							</div>
+							<div className="bg-dark-lighter/50 backdrop-blur-sm border border-gray-800 rounded-xl p-4">
+								<p className="text-xs font-semibold uppercase tracking-widest text-blue-light mb-2">
+									We measure
+								</p>
+								<p className="text-lg font-semibold text-white">
+									Infrastructure cost
 								</p>
 							</div>
 						</motion.div>

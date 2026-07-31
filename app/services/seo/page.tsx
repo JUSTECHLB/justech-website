@@ -1,375 +1,214 @@
-import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
-import {
-	CheckCircle,
-	Search,
-	BarChart,
-	Globe,
-	TrendingUp,
-	Users,
-} from "lucide-react";
+import { ArrowRight, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import Faq from "@/components/marketing/faq";
+import PageHero from "@/components/marketing/page-hero";
+import PillGroup from "@/components/marketing/pill-group";
+import Reveal from "@/components/marketing/reveal";
+import SpecList from "@/components/marketing/spec-list";
+import { pageMetadata } from "@/lib/seo";
+import { discoveryLinkProps } from "@/lib/links";
+import JsonLd from "@/components/seo/json-ld";
+import { breadcrumbSchema, serviceSchema } from "@/lib/schema";
+
+export const metadata: Metadata = pageMetadata({
+	title: "SEO in Lebanon",
+	description:
+		"SEO for businesses in Lebanon and MENA, aimed at the terms customers actually search. Measured in enquiries, not impressions.",
+	path: "/services/seo",
+});
+
+const work = [
+	"Technical SEO audit",
+	"Keyword and intent research",
+	"On-page optimization",
+	"Site architecture and internal linking",
+	"Core Web Vitals and page speed",
+	"Structured data",
+	"Local SEO and Google Business Profile",
+	"Arabic and English search",
+	"Content strategy",
+	"Link acquisition",
+	"Analytics and conversion tracking",
+	"Monthly reporting",
+];
 
 export default function SEOPage() {
 	return (
-		<main className="min-h-screen bg-[#002333] text-white">
-			<section className="container mx-auto py-20 text-center">
-				<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#4ECDC4] mb-6">
-					SEO Optimization
-				</h1>
-				<p className="text-xl mb-10 max-w-3xl mx-auto">
-					Comprehensive SEO strategies to improve your visibility and
-					drive organic traffic to your website.
-				</p>
+		<main className="min-h-screen bg-dark text-white">
+			<JsonLd
+				schema={serviceSchema({
+					name: "Search Engine Optimization",
+					description:
+						"SEO for businesses in Lebanon and MENA, aimed at the terms customers actually search.",
+					path: "/services/seo",
+					serviceType: "Search engine optimization",
+				})}
+				id="schema-service"
+			/>
+			<JsonLd
+				schema={breadcrumbSchema([
+					{ name: "Home", path: "/" },
+					{ name: "Services", path: "/services" },
+					{ name: "SEO", path: "/services/seo" },
+				])}
+				id="schema-breadcrumb"
+			/>
+
+			<PageHero
+				eyebrow="Search Engine Optimization"
+				title={
+					<>
+						Ranking for terms that{" "}
+						<span className="gradient-text">produce enquiries</span>
+						.
+					</>
+				}
+				lede="SEO for businesses in Lebanon and across MENA. We go after the searches your customers actually make, not the ones that make a report look good."
+				orbit={{
+					icon: <Search className="w-8 h-8 text-blue-light" />,
+					title: "SEO",
+					subtitle: "Enquiries, not impressions",
+				}}
+			/>
+
+			<section className="py-20 relative overflow-hidden">
+				<div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-indigo/10 rounded-full blur-[120px] -z-10"></div>
+
+				<div className="container mx-auto">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+						<SpecList
+							heading="You probably need this if"
+							items={[
+								"You are invisible on Google for the terms customers actually search",
+								"Traffic goes up and enquiries stay flat",
+								"Competitors with worse offerings outrank you",
+								"Nobody can say which pages bring in business",
+								"An agency sent you rankings for keywords nobody searches",
+								"Your Google Business Profile is out of date or unclaimed",
+							]}
+						/>
+
+						<div>
+							<Reveal>
+								<h2 className="text-sm font-semibold uppercase tracking-widest text-blue-light mb-6">
+									What the work involves
+								</h2>
+							</Reveal>
+							<PillGroup items={work} />
+
+							<Reveal delay={0.1}>
+								<h2 className="text-sm font-semibold uppercase tracking-widest text-blue-light mt-12 mb-6">
+									How we measure it
+								</h2>
+								<p className="text-lg text-gray-300">
+									Qualified enquiries per month. Conversion
+									rate from organic. Rankings for terms with
+									commercial intent. Revenue per visitor.
+									Impressions and average position are
+									diagnostics, not results.
+								</p>
+							</Reveal>
+						</div>
+					</div>
+				</div>
 			</section>
 
-			<section className="container mx-auto py-16">
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-					<div>
-						<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-6">
-							Boost Your Online Visibility
+			<section className="py-20 relative bg-dark-lighter overflow-hidden">
+				<div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue/10 rounded-full blur-[120px] -z-10"></div>
+
+				<div className="container mx-auto">
+					<Reveal>
+						<h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+							How an engagement{" "}
+							<span className="gradient-text">actually runs</span>
 						</h2>
-						<p className="text-lg leading-relaxed mb-4">
-							At JUSTECH, we understand that having a beautiful
-							website is only half the battle. For your business
-							to succeed online, your target audience needs to
-							find you. That's where our SEO optimization services
-							come in.
-						</p>
-						<p className="text-lg leading-relaxed mb-4">
-							We develop comprehensive SEO strategies tailored to
-							your business goals, industry, and target audience.
-							Our approach combines technical SEO, on-page
-							optimization, content strategy, and off-page
-							techniques to improve your search engine rankings
-							and drive organic traffic to your website.
-						</p>
-						<p className="text-lg leading-relaxed">
-							Our SEO experts stay up-to-date with the latest
-							algorithm changes and industry trends to ensure that
-							your website maintains and improves its position in
-							search results over time.
-						</p>
-					</div>
-					<div className="relative">
-						<div className="bg-gray-300 rounded-3xl overflow-hidden relative">
-							<Image
-								src="https://justechlb.com/wp-content/uploads/2023/10/seo-optimization.jpg"
-								alt="SEO Optimization"
-								width={600}
-								height={600}
-								className="object-cover"
-							/>
-						</div>
+					</Reveal>
+					<div className="max-w-3xl mx-auto">
+						<SpecList
+							heading="Sequence"
+							numbered
+							items={[
+								"Technical audit. Crawlability, indexation, speed, structured data, and everything quietly stopping pages from ranking.",
+								"Research. The terms your buyers use, in Arabic and English, sorted by intent rather than volume.",
+								"Fix the foundations. Site structure, internal linking, metadata, and Core Web Vitals before any content work.",
+								"Content. Pages that answer a real search, written for the person searching rather than for a keyword count.",
+								"Authority. Earning links and citations a human would consider relevant.",
+								"Measure and iterate. Conversion tracking wired to enquiries, reviewed monthly, with the plan adjusted from data.",
+							]}
+						/>
 					</div>
 				</div>
 			</section>
 
-			<section className="container mx-auto py-16 bg-[#00314a] rounded-xl p-10">
-				<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-10 text-center">
-					Our SEO Services
-				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<Search className="w-12 h-12 text-[#4ECDC4] mb-4" />
-						<h3 className="text-xl font-semibold mb-4">
-							Keyword Research & Analysis
-						</h3>
-						<p className="text-gray-300">
-							We identify the most relevant and valuable keywords
-							for your business to target, analyzing search
-							volume, competition, and user intent.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<Globe className="w-12 h-12 text-[#4ECDC4] mb-4" />
-						<h3 className="text-xl font-semibold mb-4">
-							On-Page SEO
-						</h3>
-						<p className="text-gray-300">
-							We optimize your website's content, meta tags,
-							headings, images, and internal linking structure to
-							improve relevance and user experience.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<TrendingUp className="w-12 h-12 text-[#4ECDC4] mb-4" />
-						<h3 className="text-xl font-semibold mb-4">
-							Technical SEO
-						</h3>
-						<p className="text-gray-300">
-							We address technical issues that affect your
-							website's performance, including site speed,
-							mobile-friendliness, indexing, and crawlability.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<Users className="w-12 h-12 text-[#4ECDC4] mb-4" />
-						<h3 className="text-xl font-semibold mb-4">
-							Link Building
-						</h3>
-						<p className="text-gray-300">
-							We develop strategies to acquire high-quality
-							backlinks from reputable websites, improving your
-							domain authority and search rankings.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<BarChart className="w-12 h-12 text-[#4ECDC4] mb-4" />
-						<h3 className="text-xl font-semibold mb-4">
-							SEO Audit & Analysis
-						</h3>
-						<p className="text-gray-300">
-							We conduct comprehensive audits to identify issues
-							and opportunities for improvement in your website's
-							SEO performance.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<TrendingUp className="w-12 h-12 text-[#4ECDC4] mb-4" />
-						<h3 className="text-xl font-semibold mb-4">
-							Local SEO
-						</h3>
-						<p className="text-gray-300">
-							We optimize your online presence for local searches,
-							including Google My Business optimization and local
-							citation building.
-						</p>
-					</div>
-				</div>
-			</section>
+			{/*
+			  The previous version of this page carried two case studies with
+			  invented numbers (150% traffic, 35% conversion, 120% leads) for
+			  unnamed clients, linking to /portfolio/seo-case-study-1 and -2,
+			  which do not exist. Both have been removed.
 
-			<section className="container mx-auto py-16">
-				<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-10 text-center">
-					Our SEO Process
-				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					<div className="bg-[#003a4f] p-6 rounded-xl relative">
-						<div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#4ECDC4] flex items-center justify-center text-[#002333] font-bold text-xl">
-							1
-						</div>
-						<h3 className="text-xl font-semibold mb-2 mt-4">
-							Discovery & Audit
-						</h3>
-						<p className="text-gray-300">
-							We analyze your current SEO performance, identify
-							issues, and understand your business goals and
-							target audience.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl relative">
-						<div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#4ECDC4] flex items-center justify-center text-[#002333] font-bold text-xl">
-							2
-						</div>
-						<h3 className="text-xl font-semibold mb-2 mt-4">
-							Strategy Development
-						</h3>
-						<p className="text-gray-300">
-							We create a customized SEO strategy based on our
-							findings, focusing on the most impactful
-							improvements.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl relative">
-						<div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#4ECDC4] flex items-center justify-center text-[#002333] font-bold text-xl">
-							3
-						</div>
-						<h3 className="text-xl font-semibold mb-2 mt-4">
-							Implementation
-						</h3>
-						<p className="text-gray-300">
-							We execute the strategy, making on-page and
-							technical optimizations, creating content, and
-							building quality backlinks.
-						</p>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl relative">
-						<div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-[#4ECDC4] flex items-center justify-center text-[#002333] font-bold text-xl">
-							4
-						</div>
-						<h3 className="text-xl font-semibold mb-2 mt-4">
-							Monitoring & Refinement
-						</h3>
-						<p className="text-gray-300">
-							We track performance, analyze results, and
-							continuously refine our approach to maximize your
-							SEO success.
-						</p>
-					</div>
-				</div>
-			</section>
+			  TODO (needs input from JUSTECH): a named SEO client with real
+			  before-and-after numbers. Alkoun Business, AmazeTech, Rut
+			  Essentials and The Yas Design are tagged as SEO work in the
+			  portfolio, so the data may already exist.
+			*/}
 
-			<section className="container mx-auto py-16 bg-[#00314a] rounded-xl p-10">
-				<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-10 text-center">
-					SEO Success Stories
-				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<h3 className="text-xl font-semibold mb-4">
-							E-commerce Website
-						</h3>
-						<p className="text-gray-300 mb-4">
-							We helped an e-commerce client increase their
-							organic traffic by 150% and improve their conversion
-							rate by 35% through comprehensive SEO optimization.
-						</p>
-						<div className="mb-4">
-							<h4 className="font-semibold mb-2">Results:</h4>
-							<ul className="list-disc list-inside space-y-1 text-gray-300">
-								<li>150% increase in organic traffic</li>
-								<li>35% improvement in conversion rate</li>
-								<li>
-									First page rankings for 75+ target keywords
-								</li>
-								<li>
-									200% increase in revenue from organic search
-								</li>
-							</ul>
-						</div>
-						<Link href="/portfolio/seo-case-study-1">
-							<Button
-								variant="link"
-								className="text-[#4ECDC4] p-0 hover:text-[#3dbdb5]"
-							>
-								View Case Study
-							</Button>
+			<Faq
+				heading="Common questions"
+				items={[
+					{
+						question: "How long does SEO take to show results?",
+						answer: "Technical fixes can move things within weeks. Ranking for competitive commercial terms usually takes three to six months, and longer in a crowded category. Anyone promising page one in thirty days is either targeting terms nobody searches or planning something that will cost you the domain later.",
+					},
+					{
+						question: "Do you work in Arabic as well as English?",
+						answer: "Yes. Search behaviour differs between the two, including transliteration and dialect, so we research them separately rather than translating a keyword list.",
+					},
+					{
+						question:
+							"What is the difference between local SEO and regular SEO?",
+						answer: "Local SEO targets searches with geographic intent, where the map pack and your Google Business Profile decide who gets called. For a business serving Beirut or the Gulf that is often where the enquiries actually come from, so it gets treated as its own workstream.",
+					},
+					{
+						question: "Can you guarantee a number one ranking?",
+						answer: "No, and neither can anyone else. Google does not sell placement in organic results and does not publish the algorithm. What we commit to is the work, the measurement, and an honest read on whether a term is worth chasing at all.",
+					},
+				]}
+			/>
+
+			<section className="py-24 relative">
+				<div className="absolute inset-0 gradient-bg rounded-3xl mx-4 md:mx-12 -z-10"></div>
+				<div className="absolute inset-0 grid-pattern opacity-10 rounded-3xl mx-4 md:mx-12 -z-10"></div>
+
+				<Reveal className="container mx-auto py-16 text-center">
+					<h2 className="text-3xl md:text-5xl font-bold mb-6">
+						Find out what you are{" "}
+						<span className="gradient-text">missing</span>.
+					</h2>
+					<p className="text-xl mb-10 max-w-2xl mx-auto">
+						Part of{" "}
+						<Link
+							href="/revenue-scaling"
+							className="underline underline-offset-4"
+						>
+							revenue scaling
 						</Link>
-					</div>
-					<div className="bg-[#003a4f] p-6 rounded-xl">
-						<h3 className="text-xl font-semibold mb-4">
-							Local Service Business
-						</h3>
-						<p className="text-gray-300 mb-4">
-							Our local SEO strategy helped a service business
-							dominate local search results, leading to a 120%
-							increase in leads and a 45% increase in revenue.
-						</p>
-						<div className="mb-4">
-							<h4 className="font-semibold mb-2">Results:</h4>
-							<ul className="list-disc list-inside space-y-1 text-gray-300">
-								<li>120% increase in qualified leads</li>
-								<li>
-									Top 3 rankings for all local service
-									keywords
-								</li>
-								<li>45% increase in revenue</li>
-								<li>
-									300% increase in Google My Business
-									visibility
-								</li>
-							</ul>
-						</div>
-						<Link href="/portfolio/seo-case-study-2">
-							<Button
-								variant="link"
-								className="text-[#4ECDC4] p-0 hover:text-[#3dbdb5]"
-							>
-								View Case Study
-							</Button>
-						</Link>
-					</div>
-				</div>
-			</section>
-
-			<section className="container mx-auto py-16">
-				<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-10 text-center">
-					Benefits of SEO Optimization
-				</h2>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-					<div className="flex items-start gap-4">
-						<CheckCircle className="w-6 h-6 text-[#4ECDC4] mt-1" />
-						<div>
-							<h3 className="text-xl font-semibold mb-2">
-								Increased Organic Traffic
-							</h3>
-							<p className="text-gray-300">
-								Higher search engine rankings lead to more
-								visibility and increased organic traffic to your
-								website.
-							</p>
-						</div>
-					</div>
-					<div className="flex items-start gap-4">
-						<CheckCircle className="w-6 h-6 text-[#4ECDC4] mt-1" />
-						<div>
-							<h3 className="text-xl font-semibold mb-2">
-								Better Quality Leads
-							</h3>
-							<p className="text-gray-300">
-								SEO attracts users who are actively searching
-								for your products or services, resulting in
-								higher-quality leads.
-							</p>
-						</div>
-					</div>
-					<div className="flex items-start gap-4">
-						<CheckCircle className="w-6 h-6 text-[#4ECDC4] mt-1" />
-						<div>
-							<h3 className="text-xl font-semibold mb-2">
-								Cost-Effective Marketing
-							</h3>
-							<p className="text-gray-300">
-								SEO provides a higher ROI compared to many other
-								marketing channels, especially in the long term.
-							</p>
-						</div>
-					</div>
-					<div className="flex items-start gap-4">
-						<CheckCircle className="w-6 h-6 text-[#4ECDC4] mt-1" />
-						<div>
-							<h3 className="text-xl font-semibold mb-2">
-								Enhanced User Experience
-							</h3>
-							<p className="text-gray-300">
-								SEO improvements often lead to a better user
-								experience, which can increase engagement and
-								conversions.
-							</p>
-						</div>
-					</div>
-					<div className="flex items-start gap-4">
-						<CheckCircle className="w-6 h-6 text-[#4ECDC4] mt-1" />
-						<div>
-							<h3 className="text-xl font-semibold mb-2">
-								Competitive Advantage
-							</h3>
-							<p className="text-gray-300">
-								Effective SEO can help you outrank competitors
-								and establish your business as an industry
-								leader.
-							</p>
-						</div>
-					</div>
-					<div className="flex items-start gap-4">
-						<CheckCircle className="w-6 h-6 text-[#4ECDC4] mt-1" />
-						<div>
-							<h3 className="text-xl font-semibold mb-2">
-								Long-Term Results
-							</h3>
-							<p className="text-gray-300">
-								While SEO takes time to show results, the
-								benefits are long-lasting and continue to
-								compound over time.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section className="container mx-auto py-16 text-center">
-				<h2 className="text-3xl md:text-4xl font-bold text-[#4ECDC4] mb-6">
-					Ready to Improve Your Search Rankings?
-				</h2>
-				<p className="text-xl mb-10 max-w-3xl mx-auto">
-					Contact us today to discuss your SEO needs and get a free
-					website audit.
-				</p>
-				<Link href="/contact">
-					<Button className="bg-[#4ECDC4] hover:bg-[#3dbdb5] text-white px-6 py-6 text-lg h-auto">
-						Get A Free SEO Audit
-					</Button>
-				</Link>
+						. Tell us the terms you want to win on a short call and
+						we will tell you honestly whether they are worth
+						chasing.
+					</p>
+					<Link
+						{...discoveryLinkProps}
+						className="inline-block w-full sm:w-auto"
+					>
+						<Button className="bg-white text-dark hover:bg-gray-100 w-full sm:w-auto whitespace-normal px-6 sm:px-8 py-6 text-base sm:text-lg h-auto rounded-full group transition-transform duration-300 hover:scale-105">
+							Book a discovery call
+							<ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+						</Button>
+					</Link>
+				</Reveal>
 			</section>
 		</main>
 	);

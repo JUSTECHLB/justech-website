@@ -17,6 +17,7 @@ import {
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { discoveryLinkProps } from "@/lib/links";
 
 export default function BusinessHero() {
 	const [isLoaded, setIsLoaded] = useState(false);
@@ -171,9 +172,9 @@ export default function BusinessHero() {
 							animate={isLoaded ? { opacity: 1 } : {}}
 							transition={{ duration: 0.7, delay: 0.3 }}
 						>
-							Unlock Operational <br />
+							Stop running your business on <br />
 							<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-light via-blue to-indigo">
-								Excellence & Efficiency
+								spreadsheets and WhatsApp.
 							</span>
 						</motion.h1>
 
@@ -183,11 +184,10 @@ export default function BusinessHero() {
 							animate={isLoaded ? { opacity: 1 } : {}}
 							transition={{ duration: 0.7, delay: 0.4 }}
 						>
-							Streamline workflows, eliminate bottlenecks, and
-							drive sustainable growth with our data-driven
-							optimization strategies. Our proven methodology has
-							helped businesses reduce operational costs by up to
-							35% while increasing productivity by 58%.
+							Manual work doesn't announce itself. It hides in the
+							hour someone spends retyping invoices, the report
+							that takes two days to assemble, the order that got
+							missed because it lived in a chat thread.
 						</motion.p>
 
 						<motion.div
@@ -196,108 +196,47 @@ export default function BusinessHero() {
 							animate={isLoaded ? { opacity: 1, y: 0 } : {}}
 							transition={{ duration: 0.5, delay: 0.5 }}
 						>
-							<Link href="/contact">
+							<Link {...discoveryLinkProps}>
 								<Button className="bg-gradient-to-r from-blue to-indigo hover:opacity-90 text-white rounded-full px-8 py-6 h-auto text-lg font-medium shadow-lg shadow-blue/20 hover:shadow-xl hover:shadow-blue/30 transition-all">
-									Start Optimization
+									Book a discovery call
 									<ArrowRight className="ml-2 h-5 w-5" />
-								</Button>
-							</Link>
-							<Link href="#success-stories">
-								<Button
-									variant="outline"
-									className="rounded-full px-8 py-6 h-auto text-lg font-medium border-white/10 hover:bg-white/5 transition-all"
-								>
-									View Success Stories
 								</Button>
 							</Link>
 						</motion.div>
 
 						<motion.div
-							className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl"
+							className="max-w-xl"
 							initial={{ opacity: 0, y: 20 }}
 							animate={isLoaded ? { opacity: 1, y: 0 } : {}}
 							transition={{ duration: 0.5, delay: 0.6 }}
 						>
-							<div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-								<div className="flex items-center gap-3 mb-2">
-									<div className="p-2 rounded-full bg-blue/10">
+							<p className="text-xs font-semibold uppercase tracking-widest text-blue-light mb-4">
+								What we measure
+							</p>
+							<div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+								<div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+									<div className="p-2 rounded-full bg-blue/10 w-fit mb-3">
 										<Clock className="h-4 w-4 text-blue" />
 									</div>
-									<p className="text-sm text-gray-400">
-										Efficiency
+									<p className="text-base font-semibold text-white">
+										Hours saved per week
 									</p>
 								</div>
-								<p className="text-2xl font-bold text-white">
-									+42
-									<span className="text-blue-light">%</span>
-								</p>
-							</div>
-							<div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-								<div className="flex items-center gap-3 mb-2">
-									<div className="p-2 rounded-full bg-indigo/10">
+								<div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+									<div className="p-2 rounded-full bg-indigo/10 w-fit mb-3">
 										<Settings className="h-4 w-4 text-indigo" />
 									</div>
-									<p className="text-sm text-gray-400">
-										Cost Reduction
+									<p className="text-base font-semibold text-white">
+										Error rate
 									</p>
 								</div>
-								<p className="text-2xl font-bold text-white">
-									-35<span className="text-indigo">%</span>
-								</p>
-							</div>
-							<div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
-								<div className="flex items-center gap-3 mb-2">
-									<div className="p-2 rounded-full bg-blue-light/10">
+								<div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+									<div className="p-2 rounded-full bg-blue-light/10 w-fit mb-3">
 										<Activity className="h-4 w-4 text-blue-light" />
 									</div>
-									<p className="text-sm text-gray-400">
-										Productivity
+									<p className="text-base font-semibold text-white">
+										Cost per transaction
 									</p>
-								</div>
-								<p className="text-2xl font-bold text-white">
-									+58<span className="text-blue">%</span>
-								</p>
-							</div>
-						</motion.div>
-						<motion.div
-							className="mt-6 bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10 max-w-xl"
-							initial={{ opacity: 0, y: 20 }}
-							animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-							transition={{ duration: 0.5, delay: 0.7 }}
-						>
-							<div className="flex items-center justify-between">
-								<div className="flex items-center gap-3">
-									<div className="p-2 rounded-full bg-blue/10">
-										<TrendingUp className="h-4 w-4 text-blue-light" />
-									</div>
-									<div>
-										<p className="text-sm text-gray-400">
-											Overall Performance
-										</p>
-										<p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-light to-indigo">
-											Exceptional
-										</p>
-									</div>
-								</div>
-								<div className="flex items-center gap-4">
-									<div className="flex items-center gap-2">
-										<CheckCircle className="h-5 w-5 text-green-500" />
-										<span className="text-sm text-gray-300">
-											ROI{" "}
-											<span className="font-bold text-white">
-												+187%
-											</span>
-										</span>
-									</div>
-									<div className="flex items-center gap-2">
-										<Clock className="h-5 w-5 text-blue" />
-										<span className="text-sm text-gray-300">
-											Time{" "}
-											<span className="font-bold text-white">
-												-42%
-											</span>
-										</span>
-									</div>
 								</div>
 							</div>
 						</motion.div>

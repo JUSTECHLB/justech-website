@@ -35,7 +35,7 @@ export default function TechUsp() {
 		},
 		{
 			icon: <Zap className="h-12 w-12 text-white" />,
-			title: "Seamless Integration",
+			title: "Clean Integration",
 			description:
 				"Our solutions integrate smoothly with your existing systems, minimizing disruption and maximizing value.",
 			benefits: [
@@ -94,7 +94,7 @@ export default function TechUsp() {
 					</h2>
 					<p className="text-gray-400 max-w-3xl mx-auto">
 						We differentiate ourselves through our vendor-agnostic
-						expertise, seamless integration capabilities,
+						expertise, integration capabilities,
 						accelerated delivery methodologies, and focus on
 						measurable business outcomes.
 					</p>

@@ -5,126 +5,210 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   BarChart3,
+  Boxes,
+  Brain,
   CheckCircle2,
+  ClipboardCheck,
+  Cloud,
   Code2,
-  Palette,
-  Search,
-  Rocket,
-  Lightbulb,
-  Layout,
-  TrendingUp,
   HelpCircle,
-  Sparkles,
+  Layers,
+  LineChart,
+  Palette,
+  PhoneCall,
+  Search,
+  Server,
+  TrendingUp,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import JsonLd from "@/components/seo/json-ld";
+import { faqSchema } from "@/lib/schema";
+import { discoveryLinkProps } from "@/lib/links";
 
 const stats = [
-  { value: "3+", label: "Core Services", sub: "Design, dev, SEO" },
-  { value: "100%", label: "Responsive", sub: "Mobile-first builds" },
-  { value: "24/7", label: "Online Presence", sub: "Always available" },
+  { value: "3", label: "Pillars", sub: "Revenue, operations, technology" },
+  { value: "7", label: "Services", sub: "Consultation through to AI" },
+  { value: "2019", label: "In Beirut", sub: "Serving Lebanon and MENA" },
+];
+
+// The three problems clients actually arrive with. Everything below is a way of
+// solving one of them.
+const pillars = [
+  {
+    title: "Revenue Scaling",
+    href: "/revenue-scaling",
+    icon: TrendingUp,
+    quote: "We're getting traffic but no enquiries.",
+    measured: "Qualified leads per month, conversion rate.",
+  },
+  {
+    title: "Business Operation Optimization",
+    href: "/business-operation-optimization",
+    icon: Layers,
+    quote: "My team is drowning in manual work.",
+    measured: "Hours saved per week, error rate.",
+  },
+  {
+    title: "Tech Transformation",
+    href: "/tech-transformation",
+    icon: Server,
+    quote: "Our system is old and can't handle growth.",
+    measured: "Uptime, load capacity, infrastructure cost.",
+  },
 ];
 
 const services = [
   {
-    title: "Web Design",
+    title: "Technical Consultation",
+    href: "/consultation",
+    icon: ClipboardCheck,
+    description:
+      "A paid, fixed-fee review of your code, infrastructure, cloud setup, or operations, ending in a written recommendation you own.",
+    points: [
+      "Fee agreed before we start",
+      "A document you keep either way",
+      "Credited against the project",
+    ],
+  },
+  {
+    title: "Website Design",
     href: "/services/web-design",
     icon: Palette,
     description:
-      "Modern, clean, and premium website designs that make your brand look professional.",
-    points: ["Custom layouts", "Mobile-friendly design", "Clear user experience"],
+      "Responsive websites structured so a visitor can tell what you do in five seconds and knows what to do next.",
+    points: [
+      "Mobile-first layouts",
+      "Built for page speed",
+      "One clear action per page",
+    ],
   },
   {
-    title: "Web Development",
+    title: "Custom Software Development",
     href: "/services/web-development",
     icon: Code2,
     description:
-      "Fast, reliable websites built with strong structure and smooth performance.",
-    points: ["Next.js development", "Responsive pages", "Clean reusable code"],
+      "Web and custom applications built on the stack that fits the problem, your team, and the ten-year cost.",
+    points: [
+      "Next.js, Node, Python, Go, .NET",
+      "APIs and integrations",
+      "Documentation and handover",
+    ],
   },
   {
-    title: "SEO Optimization",
+    title: "SEO",
     href: "/services/seo",
     icon: Search,
     description:
-      "SEO improvements that help your site become easier to find and understand.",
-    points: ["Page structure", "Metadata setup", "Performance-focused build"],
-  },
-];
-
-const featureCards = [
-  {
-    title: "Clean Structure",
-    icon: Layout,
-    description:
-      "Every section is organized clearly so visitors understand your services fast.",
+      "Search work aimed at the terms your customers actually use, in Arabic and English, measured in enquiries rather than impressions.",
+    points: [
+      "Technical audit and fixes",
+      "Intent-led keyword research",
+      "Local SEO and Google Business Profile",
+    ],
   },
   {
-    title: "Premium Visuals",
-    icon: Sparkles,
+    title: "Odoo Implementation",
+    href: "/services/odoo",
+    icon: Boxes,
     description:
-      "A polished visual direction that makes the website feel modern and trustworthy.",
+      "One system instead of nine spreadsheets. Odoo implementation, migration, and the custom modules it does not ship with.",
+    points: [
+      "Inventory, accounting, sales, MRP",
+      "Data migration and integrations",
+      "Training and support retainer",
+    ],
   },
   {
-    title: "Growth Focused",
-    icon: TrendingUp,
+    title: "AWS and DevOps",
+    href: "/services/aws-devops",
+    icon: Cloud,
     description:
-      "Built to support stronger branding, better conversions, and long-term growth.",
+      "Cloud migration, architecture, and the delivery pipeline around it, so deployments stop being an event everyone watches.",
+    points: [
+      "AWS migration and landing zones",
+      "CI/CD and infrastructure as code",
+      "Monitoring, backup, and recovery",
+    ],
+  },
+  {
+    title: "AI and Machine Learning",
+    href: "/ai",
+    icon: Brain,
+    description:
+      "Document extraction, ticket routing, forecasting, and internal copilots, connected to the systems you already run.",
+    points: [
+      "Built on your real data",
+      "Deployed, monitored, versioned",
+      "Measured in hours saved",
+    ],
   },
 ];
 
 const processSteps = [
   {
     step: "01",
-    title: "Discover",
-    icon: Lightbulb,
+    title: "Discovery call",
+    icon: PhoneCall,
     description:
-      "We understand your brand, goals, audience, and what the website needs to achieve.",
+      "Free and short. You describe what is not working, we ask questions, and we say whether we can help and what the right next step is.",
   },
   {
     step: "02",
-    title: "Design",
-    icon: Palette,
+    title: "Technical consultation",
+    icon: ClipboardCheck,
     description:
-      "We create a clean visual direction with strong layout, hierarchy, and style.",
+      "Paid, fixed-fee, and time-boxed. We go into the code, the infrastructure, and the numbers, and write up a recommendation you own.",
   },
   {
     step: "03",
     title: "Build",
     icon: Code2,
     description:
-      "We develop responsive, fast, and polished pages using clean code.",
+      "Delivered in slices you can actually use, rather than a single reveal at the end. You see working software as it lands.",
   },
   {
     step: "04",
-    title: "Launch",
-    icon: Rocket,
+    title: "Handover and measure",
+    icon: LineChart,
     description:
-      "We prepare the final website for deployment and make sure everything works smoothly.",
+      "Documentation, access, and runbooks so your team can take over, plus the number the work was supposed to move.",
   },
 ];
 
 const faqs = [
   {
-    question: "Can you redesign my existing website?",
+    question: "Which service do I actually need?",
     answer:
-      "Yes. We can refresh the design, improve the structure, clean up the user experience, and make the site feel more modern without losing the brand’s identity.",
+      "Most clients arrive with a symptom rather than a service: traffic that never converts, a team buried in manual work, a system that buckles under load. That is what the discovery call is for. Describe the problem and we will tell you which of these it maps to, or that it does not need us at all.",
   },
   {
-    question: "What makes a website feel more professional?",
+    question:
+      "What is the difference between the discovery call and the technical consultation?",
     answer:
-      "A professional website needs clear spacing, strong visual hierarchy, consistent styling, fast loading, and content that helps visitors understand what you offer quickly.",
+      "The discovery call is free and short. The technical consultation is a paid, fixed-fee engagement where we go into the detail and produce a written recommendation you own, credited against the project if you go ahead. Everyone starts with the discovery call.",
   },
   {
-    question: "Can you improve the website without rebuilding everything?",
+    question: "Can you work with our existing team and systems?",
     answer:
-      "Yes. Depending on the current site, we can improve specific sections, update the design, clean up the layout, optimize performance, or rebuild only the parts that need work.",
+      "Yes, and it is common. We work alongside in-house teams on architecture decisions, cloud and deployment practice, or specific builds, and we integrate with the tools you already pay for rather than replacing them by default.",
+  },
+  {
+    question: "Can you improve what we have without rebuilding it?",
+    answer:
+      "Usually. Depending on the state of the system we can fix the parts that are costing you, improve performance, restructure the content, or rebuild only the sections that need it. A full rebuild is a last resort, not a starting position.",
+  },
+  {
+    question: "Do you work with clients outside Lebanon?",
+    answer:
+      "Yes. We are based in Beirut and work with clients across Lebanon and the wider MENA region, including the Gulf. Most work runs remotely unless you would rather meet in person.",
   },
 ];
 
 export default function ServicesPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#07111f] text-white">
+      <JsonLd schema={faqSchema(faqs)} id="schema-faq" />
       <section className="relative overflow-hidden pt-28 pb-24 md:pt-36 md:pb-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(77,171,247,0.16),transparent_28%),radial-gradient(circle_at_bottom,rgba(92,124,250,0.14),transparent_30%),linear-gradient(180deg,#060b17_0%,#09101d_45%,#0b1220_100%)]" />
         <div className="absolute inset-0 grid-pattern opacity-20" />
@@ -160,9 +244,9 @@ export default function ServicesPage() {
               transition={{ duration: 0.7, delay: 0.05 }}
               className="mb-6 text-5xl font-bold leading-tight md:text-7xl"
             >
-              Digital Services
+              Every service,
               <br />
-              <span className="gradient-text">Built to Elevate Your Brand</span>
+              <span className="gradient-text">tied to a number</span>
             </motion.h1>
 
             <motion.p
@@ -171,9 +255,9 @@ export default function ServicesPage() {
               transition={{ duration: 0.7, delay: 0.12 }}
               className="mx-auto mb-10 max-w-3xl text-lg text-gray-400 md:text-xl"
             >
-              We combine design, development, and SEO into polished digital
-              experiences that look premium, perform smoothly, and support
-              long-term growth.
+              Seven services across three pillars: scaling revenue, automating
+              operations, and modernizing the technology underneath. Every
+              engagement starts with a free discovery call.
             </motion.p>
 
             <motion.div
@@ -182,19 +266,19 @@ export default function ServicesPage() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="flex flex-col justify-center gap-4 sm:flex-row"
             >
-              <Link href="/contact">
-                <Button className="h-auto rounded-full bg-gradient-to-r from-blue to-indigo px-8 py-6 text-lg text-white shadow-lg shadow-blue/10 transition-all duration-300 hover:scale-[1.02] hover:opacity-90">
-                  Start Your Project
+              <Link {...discoveryLinkProps} className="inline-block w-full sm:w-auto">
+                <Button className="h-auto w-full sm:w-auto whitespace-normal rounded-full bg-gradient-to-r from-blue to-indigo px-6 sm:px-8 py-6 text-base sm:text-lg text-white shadow-lg shadow-blue/10 transition-all duration-300 hover:scale-[1.02] hover:opacity-90">
+                  Book a discovery call
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
 
-              <a href="#services-grid">
+              <a href="#services-grid" className="inline-block w-full sm:w-auto">
                 <Button
                   variant="outline"
-                  className="h-auto rounded-full border-blue/20 px-8 py-6 text-lg text-white transition-all duration-300 hover:border-blue/30 hover:bg-dark-lighter"
+                  className="h-auto w-full sm:w-auto whitespace-normal rounded-full border-blue/20 px-6 sm:px-8 py-6 text-base sm:text-lg text-white transition-all duration-300 hover:border-blue/30 hover:bg-dark-lighter"
                 >
-                  Explore Services
+                  See all seven
                 </Button>
               </a>
             </motion.div>
@@ -213,18 +297,18 @@ export default function ServicesPage() {
                 <div className="rounded-[28px] border border-white/5 bg-dark/50 p-8 md:p-10">
                   <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue/10 bg-dark-lighter/60 px-4 py-2 text-sm text-blue-light">
                     <BarChart3 className="h-4 w-4" />
-                    Premium digital execution
+                    Three problems, seven answers
                   </div>
 
                   <h2 className="mb-5 text-3xl font-bold leading-tight md:text-5xl">
-                    Strategy, design, and development
-                    <span className="gradient-text"> working together</span>
+                    Pick the problem,
+                    <span className="gradient-text"> not the product</span>
                   </h2>
 
                   <p className="mb-8 max-w-2xl text-lg text-gray-400">
-                    Instead of treating services as disconnected tasks, we create
-                    a unified digital presence where structure, visuals, and
-                    performance all support the same business goals.
+                    Nobody wakes up wanting an Odoo implementation. They want
+                    the stock count to be right. Start from the problem and the
+                    service that fits usually picks itself.
                   </p>
 
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -256,27 +340,27 @@ export default function ServicesPage() {
                       transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                       className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur-md"
                     >
-                      <div className="mb-5 flex items-center gap-2">
+                      <div className="mb-5 flex flex-wrap items-center gap-2">
                         <span className="rounded-full bg-blue/10 px-3 py-1 text-sm text-blue-light">
-                          Design
+                          Revenue
                         </span>
                         <span className="rounded-full bg-blue/10 px-3 py-1 text-sm text-blue-light">
-                          Dev
+                          Operations
                         </span>
                         <span className="rounded-full bg-blue/10 px-3 py-1 text-sm text-blue-light">
-                          SEO
+                          Technology
                         </span>
                       </div>
 
                       <h3 className="mb-4 text-2xl font-semibold leading-snug sm:text-3xl">
-                        A cleaner service experience with stronger visual direction
+                        Every engagement states the metric it is accountable for
                       </h3>
 
                       <div className="space-y-3 text-gray-300">
                         {[
-                          "Clear structure for your core offerings",
-                          "Consistent styling across the whole site",
-                          "Premium presentation without clutter",
+                          "Qualified leads per month, conversion rate",
+                          "Hours saved per week, error rate",
+                          "Uptime, load capacity, infrastructure cost",
                         ].map((item) => (
                           <div key={item} className="flex items-start gap-3">
                             <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-blue-light" />
@@ -300,18 +384,18 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6">
           <div className="mb-16 text-center">
             <div className="mb-5 inline-flex items-center rounded-full border border-blue/20 bg-dark-lighter/60 px-5 py-2 text-sm text-blue-light">
-              Main services
+              All services
             </div>
             <h2 className="mb-6 text-3xl font-bold md:text-5xl">
-              What We <span className="gradient-text">Specialize In</span>
+              What We <span className="gradient-text">Actually Do</span>
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-400 md:text-xl">
-              Focused, high-impact services designed to strengthen your digital
-              presence and support meaningful growth.
+              Seven services. Each one links to a page that says what it
+              involves, how it runs, and what we measure.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => {
               const Icon = service.icon;
 
@@ -325,8 +409,8 @@ export default function ServicesPage() {
                   className="group"
                 >
                   <Link href={service.href} className="block h-full">
-                    <div className="relative h-full overflow-hidden rounded-[28px] border border-blue/10 bg-dark-lighter/70 p-8 shadow-lg shadow-transparent transition-all duration-300 group-hover:-translate-y-3 group-hover:border-blue/20 group-hover:shadow-[0_18px_50px_rgba(8,15,30,0.35)]">
-                      <div className="relative z-10">
+                    <div className="relative flex h-full flex-col overflow-hidden rounded-[28px] border border-blue/10 bg-dark-lighter/70 p-8 shadow-lg shadow-transparent transition-all duration-300 group-hover:-translate-y-3 group-hover:border-blue/20 group-hover:shadow-[0_18px_50px_rgba(8,15,30,0.35)]">
+                      <div className="relative z-10 flex h-full flex-col">
                         <div className="mb-8 flex items-center justify-between">
                           <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-blue/10 bg-gradient-to-r from-blue/15 to-indigo/20">
                             <Icon className="h-6 w-6 text-blue-light" />
@@ -334,10 +418,10 @@ export default function ServicesPage() {
                           <ArrowRight className="h-5 w-5 text-gray-500 transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-light" />
                         </div>
 
-                        <h3 className="mb-4 text-3xl font-semibold">
+                        <h3 className="mb-4 text-2xl font-semibold">
                           {service.title}
                         </h3>
-                        <p className="mb-6 text-lg leading-relaxed text-gray-400">
+                        <p className="mb-6 leading-relaxed text-gray-400">
                           {service.description}
                         </p>
 
@@ -353,7 +437,7 @@ export default function ServicesPage() {
                           ))}
                         </div>
 
-                        <div className="inline-flex items-center gap-2 text-sm font-medium text-blue-light">
+                        <div className="mt-auto inline-flex items-center gap-2 text-sm font-medium text-blue-light">
                           Learn more
                           <ArrowRight className="h-4 w-4" />
                         </div>
@@ -371,31 +455,52 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6">
           <div className="mb-16 text-center">
             <div className="mb-5 inline-flex items-center rounded-full border border-blue/20 bg-dark/60 px-5 py-2 text-sm text-blue-light">
-              Core strengths
+              The three pillars
             </div>
             <h2 className="mb-6 text-3xl font-bold md:text-5xl">
-              Built for <span className="gradient-text">Performance</span>
+              Which problem are you{" "}
+              <span className="gradient-text">actually solving</span>?
             </h2>
+            <p className="mx-auto max-w-2xl text-lg text-gray-400 md:text-xl">
+              Most clients arrive with one of these three. Some end up with all
+              of them.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {featureCards.map((item, index) => {
-              const Icon = item.icon;
+            {pillars.map((pillar, index) => {
+              const Icon = pillar.icon;
 
               return (
                 <motion.div
-                  key={item.title}
+                  key={pillar.title}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className="rounded-[28px] border border-blue/10 bg-dark p-8 transition-all duration-300 hover:-translate-y-1.5 hover:border-blue/20"
+                  className="group h-full"
                 >
-                  <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-blue/10 bg-gradient-to-r from-blue/15 to-indigo/20">
-                    <Icon className="h-6 w-6 text-blue-light" />
-                  </div>
-                  <h3 className="mb-4 text-2xl font-semibold">{item.title}</h3>
-                  <p className="text-lg text-gray-400">{item.description}</p>
+                  <Link href={pillar.href} className="block h-full">
+                    <div className="flex h-full flex-col rounded-[28px] border border-blue/10 bg-dark p-8 transition-all duration-300 group-hover:-translate-y-2 group-hover:border-blue/25">
+                      <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl border border-blue/10 bg-gradient-to-r from-blue/15 to-indigo/20">
+                        <Icon className="h-6 w-6 text-blue-light" />
+                      </div>
+
+                      <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-blue-light">
+                        {pillar.title}
+                      </p>
+                      <h3 className="mb-6 text-xl font-semibold italic text-white">
+                        &ldquo;{pillar.quote}&rdquo;
+                      </h3>
+
+                      <p className="mt-auto border-t border-blue/10 pt-4 text-sm text-gray-400">
+                        <span className="font-semibold text-blue-light">
+                          Measured in:
+                        </span>{" "}
+                        {pillar.measured}
+                      </p>
+                    </div>
+                  </Link>
                 </motion.div>
               );
             })}
@@ -410,8 +515,12 @@ export default function ServicesPage() {
               Process
             </div>
             <h2 className="mb-6 text-3xl font-bold md:text-5xl">
-              From Idea to <span className="gradient-text">Launch</span>
+              How Working With Us{" "}
+              <span className="gradient-text">Actually Goes</span>
             </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-400 md:text-xl">
+              The same four steps whichever service you end up needing.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -459,6 +568,37 @@ export default function ServicesPage() {
 
           <FAQAccordion />
         </div>
+      </section>
+
+      <section className="relative overflow-hidden py-24">
+        <div className="absolute inset-0 gradient-bg -z-10 mx-4 rounded-3xl md:mx-12" />
+        <div className="absolute inset-0 grid-pattern -z-10 mx-4 rounded-3xl opacity-10 md:mx-12" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="container mx-auto px-6 py-16 text-center"
+        >
+          <h2 className="mb-6 text-3xl font-bold md:text-5xl">
+            Still not sure which one{" "}
+            <span className="gradient-text">you need</span>?
+          </h2>
+          <p className="mx-auto mb-10 max-w-2xl text-xl">
+            Describe the problem in a paragraph. We will tell you which of the
+            seven it maps to, or that you do not need us yet.
+          </p>
+          <Link
+            {...discoveryLinkProps}
+            className="inline-block w-full sm:w-auto"
+          >
+            <Button className="group h-auto w-full whitespace-normal rounded-full bg-white px-6 py-6 text-base text-dark transition-transform duration-300 hover:scale-105 hover:bg-gray-100 sm:w-auto sm:px-8 sm:text-lg">
+              Book a discovery call
+              <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </Link>
+        </motion.div>
       </section>
     </main>
   );

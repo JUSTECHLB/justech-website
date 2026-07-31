@@ -8,7 +8,7 @@ export default function Methodology() {
 			number: 1,
 			title: "Assessment",
 			description:
-				"We conduct a comprehensive analysis of your current revenue streams, market position, and growth opportunities to establish a baseline.",
+				"We conduct a full analysis of your current revenue streams, market position, and growth opportunities to establish a baseline.",
 			activities: [
 				"Revenue stream analysis",
 				"Market position evaluation",
@@ -55,7 +55,7 @@ export default function Methodology() {
 	];
 
 	return (
-		<section className="relative py-32 bg-gradient-to-b from-dark to-dark-lighter">
+		<section className="relative py-32 bg-gradient-to-b from-dark to-dark-lighter overflow-hidden">
 			<div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue/10 to-transparent rounded-full blur-[180px] -z-10"></div>
 
 			<div className="absolute inset-0 bg-grid-pattern opacity-[0.03] -z-10"></div>

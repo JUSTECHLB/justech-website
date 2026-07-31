@@ -95,7 +95,7 @@ export default function ContactPage() {
 				</div>
 			</section>
 
-			<section className="relative py-16">
+			<section className="relative py-16 overflow-hidden">
 				<div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-indigo/10 rounded-full blur-[100px] -z-10"></div>
 
 				<div className="container mx-auto">
@@ -389,7 +389,7 @@ export default function ContactPage() {
 				</div>
 			</section>
 
-			<section className="relative py-16">
+			<section className="relative py-16 overflow-hidden">
 				<div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-blue/10 rounded-full blur-[100px] -z-10"></div>
 
 				<div className="container mx-auto">

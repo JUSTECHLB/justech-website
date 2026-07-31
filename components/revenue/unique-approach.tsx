@@ -12,7 +12,7 @@ export default function UniqueApproach() {
 				"Our proprietary risk assessment framework ensures that every growth strategy is evaluated for potential downsides, with built-in contingency plans that protect your business during scaling.",
 			benefits: [
 				"98% client satisfaction rate",
-				"Comprehensive risk assessment",
+				"Risk assessment at every stage",
 				"Built-in contingency planning",
 				"Proactive issue identification",
 			],
@@ -44,7 +44,7 @@ export default function UniqueApproach() {
 	];
 
 	return (
-		<section className="relative py-32 bg-gradient-to-b from-dark-lighter to-dark">
+		<section className="relative py-32 bg-gradient-to-b from-dark-lighter to-dark overflow-hidden">
 			<div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue/10 to-transparent rounded-full blur-[180px] -z-10"></div>
 
 			<div className="absolute inset-0 bg-grid-pattern opacity-[0.03] -z-10"></div>

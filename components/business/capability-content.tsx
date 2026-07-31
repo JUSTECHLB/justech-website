@@ -19,7 +19,7 @@ export default function CapabilityContent() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue to-indigo">Optimization</span>
           </h2>
           <p className="text-gray-300 max-w-3xl mx-auto">
-            Transform your business operations with our comprehensive optimization services designed to streamline
+            Transform your business operations with optimization services designed to streamline
             processes, reduce inefficiencies, and drive sustainable growth.
           </p>
         </motion.div>
@@ -41,7 +41,7 @@ export default function CapabilityContent() {
                       <BarChart3 className="w-6 h-6 text-blue" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-semibold mb-2">Comprehensive Analysis</h4>
+                      <h4 className="text-lg font-semibold mb-2">Full Analysis</h4>
                       <p className="text-gray-400">
                         We conduct a thorough assessment of your current operations, identifying bottlenecks,
                         inefficiencies, and areas for improvement.

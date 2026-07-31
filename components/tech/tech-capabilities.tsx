@@ -35,7 +35,7 @@ export default function TechCapabilities() {
 				{
 					title: "Cloud Migration",
 					description:
-						"Seamlessly transition your applications and data to AWS, Azure, or Google Cloud with minimal disruption.",
+						"Transition your applications and data to AWS, Azure, or Google Cloud with minimal disruption.",
 					icon: (
 						<div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-400 rounded-md text-white">
 							<Server className="h-5 w-5" />
@@ -151,7 +151,7 @@ export default function TechCapabilities() {
 				{
 					title: "API Development",
 					description:
-						"Create robust APIs that enable seamless integration between systems and support new business models.",
+						"Create robust APIs that enable clean integration between systems and support new business models.",
 					icon: (
 						<div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-cyan-500 to-blue-400 rounded-md text-white">
 							<Network className="h-5 w-5" />
@@ -212,7 +212,7 @@ export default function TechCapabilities() {
 						viewport={{ once: true }}
 						transition={{ duration: 0.6, delay: 0.1 }}
 					>
-						Comprehensive{" "}
+						End-to-End{" "}
 						<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-light to-indigo">
 							Tech Transformation
 						</span>
@@ -226,7 +226,7 @@ export default function TechCapabilities() {
 					>
 						Our technology transformation services span across
 						cloud, data, and application modernization, enabling
-						your business to leverage cutting-edge technologies for
+						your business to use current technologies for
 						competitive advantage.
 					</motion.p>
 				</motion.div>
