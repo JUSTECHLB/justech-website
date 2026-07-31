@@ -24,6 +24,8 @@ interface ServiceCardProps {
 	description: string;
 	icon: string;
 	isActive?: boolean;
+	quote?: string;
+	measured?: string;
 }
 
 export default function ServiceCard({
@@ -31,6 +33,8 @@ export default function ServiceCard({
 	description,
 	icon,
 	isActive = false,
+	quote,
+	measured,
 }: ServiceCardProps) {
 	const [isHovering, setIsHovering] = useState(false);
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -82,7 +86,7 @@ export default function ServiceCard({
 	return (
 		<div
 			ref={cardRef}
-			className={`gradient-border p-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-blue/10 hover:-translate-y-2 group card-hover-gradient relative overflow-hidden ${
+			className={`gradient-border p-8 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-blue/10 hover:-translate-y-2 group card-hover-gradient relative overflow-hidden h-full flex flex-col ${
 				isActive ? "shadow-lg shadow-blue/10 -translate-y-2" : ""
 			}`}
 			onMouseEnter={() => setIsHovering(true)}
@@ -101,12 +105,34 @@ export default function ServiceCard({
 			<div className="w-16 h-16 rounded-2xl bg-dark-lighter border border-blue/20 flex items-center justify-center mb-6 group-hover:border-blue-light transition-colors relative z-10">
 				{getIcon()}
 			</div>
-			<h3 className="text-xl font-semibold mb-3 group-hover:text-white relative z-10">
-				{title}
-			</h3>
-			<p className="text-gray-400 group-hover:text-gray-200 relative z-10">
+
+			{quote ? (
+				<>
+					<p className="text-xs font-semibold uppercase tracking-widest text-blue-light mb-3 relative z-10">
+						{title}
+					</p>
+					<h3 className="text-xl font-semibold mb-4 text-white italic relative z-10">
+						&ldquo;{quote}&rdquo;
+					</h3>
+				</>
+			) : (
+				<h3 className="text-xl font-semibold mb-3 group-hover:text-white relative z-10">
+					{title}
+				</h3>
+			)}
+
+			<p className="text-gray-400 group-hover:text-gray-200 relative z-10 mb-6">
 				{description}
 			</p>
+
+			{measured && (
+				<p className="mt-auto pt-4 border-t border-blue/10 text-sm text-gray-400 relative z-10">
+					<span className="font-semibold text-blue-light">
+						Measured in:
+					</span>{" "}
+					{measured}
+				</p>
+			)}
 		</div>
 	);
 }

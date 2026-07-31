@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { discoveryLinkProps } from "@/lib/links";
 
 export default function BusinessCTA() {
 	return (
@@ -21,62 +22,26 @@ export default function BusinessCTA() {
 							transition={{ duration: 0.5 }}
 						>
 							<h2 className="text-3xl md:text-4xl font-bold mb-6">
-								Ready to Transform Your{" "}
+								Find out where the{" "}
 								<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue to-indigo">
-									Business Operations
+									hours are going
 								</span>
-								?
+								.
 							</h2>
 
 							<p className="text-lg text-gray-300 mb-8">
-								Schedule a consultation with our operational
-								experts to discover how we can optimize your
-								business processes, reduce costs, and drive
-								sustainable growth.
+								Walk us through the process that eats your week on
+								a short call. No charge, and we'll tell you
+								whether it's worth automating.
 							</p>
 
-							<div className="flex flex-col sm:flex-row gap-4 justify-center">
-								<Link href="/contact">
+							<div className="flex justify-center">
+								<Link {...discoveryLinkProps}>
 									<Button className="bg-gradient-to-r from-blue to-indigo hover:opacity-90 text-white rounded-full px-8 py-6 h-auto w-full sm:w-auto">
-										Schedule Consultation
+										Book a discovery call
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Button>
 								</Link>
-								<Link href="#optimization-process">
-									<Button
-										variant="outline"
-										className="rounded-full px-8 py-6 h-auto border-white/10 hover:bg-white/5 w-full sm:w-auto"
-									>
-										Learn More
-									</Button>
-								</Link>
-							</div>
-
-							<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-								<div className="bg-dark/50 backdrop-blur-sm rounded-xl p-4 border border-white/5">
-									<div className="text-2xl font-bold text-blue-light mb-1">
-										45%
-									</div>
-									<div className="text-sm text-gray-400">
-										Average Efficiency Improvement
-									</div>
-								</div>
-								<div className="bg-dark/50 backdrop-blur-sm rounded-xl p-4 border border-white/5">
-									<div className="text-2xl font-bold text-blue-light mb-1">
-										32%
-									</div>
-									<div className="text-sm text-gray-400">
-										Average Cost Reduction
-									</div>
-								</div>
-								<div className="bg-dark/50 backdrop-blur-sm rounded-xl p-4 border border-white/5">
-									<div className="text-2xl font-bold text-blue-light mb-1">
-										3-6
-									</div>
-									<div className="text-sm text-gray-400">
-										Months to See Results
-									</div>
-								</div>
 							</div>
 						</motion.div>
 					</div>

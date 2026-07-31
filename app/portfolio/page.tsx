@@ -18,7 +18,7 @@ export default function Portfolio() {
 const projects: Project[] = [
     {
         title: "LEBOTICS",
-        description: "A full-stack e-Responsive corporate website showcasing robotics education, hardware prototyping, and tech services, optimized for web and mobile.",
+        description: "A responsive corporate website covering robotics education, hardware prototyping, and technical services, optimized for web and mobile.",
         image: "images/lebotics-logo.png",
         previewImage: "images/lebotics.jpg",
         categories: ["web"],
@@ -45,7 +45,7 @@ const projects: Project[] = [
     },
     {
       title: "Rut Essentials",
-      description: "A sleek, responsive corporate‐style website built to present high-quality Private Label, Hospitality, and Spa & Salon products. It emphasizes visual storytelling, seamless navigation, and full mobile desktop optimization, aimed at converting style-curious visitors into loyal customers.",
+      description: "Five separate builds plus an ongoing maintenance and management retainer. A responsive corporate site presenting Private Label, Hospitality, and Spa & Salon product lines, built around visual storytelling and mobile-first browsing.",
       image: "images/rut-logo.png",
       previewImage: "images/rut.png",
       categories: ["web", "seo"], 
@@ -54,7 +54,7 @@ const projects: Project[] = [
   },
   {
     title: "Spade Travel",
-    description: "A modern, responsive web application crafted for Spade’s internal travel agency operations. The dashboard highlights people & resources control, client management, reporting tools, and admin workflows—designed for clarity, performance, and consistency across devices.",
+    description: "A responsive web application for Spade's internal travel agency operations. The dashboard covers people and resource control, client management, reporting, and admin workflows, built for clarity and consistency across devices.",
     image: "images/spade-logo.webp",
     previewImage: "images/spade.png",
     categories: ["web"], 
@@ -63,7 +63,7 @@ const projects: Project[] = [
   },
   {
     title: "AmazeTech",
-    description: "A modern, responsive e-commerce website for AmazeTech, showcasing cutting-edge electronics, accessories, and gadgets. Built with intuitive navigation, clean design, and optimized for mobile and desktop performance to convert tech shoppers into loyal customers.",
+    description: "A responsive e-commerce website for AmazeTech, selling electronics, accessories, and gadgets. Built with clear category navigation and optimized for mobile and desktop performance.",
     image: "images/amazetech-logo.webp",
     previewImage: "images/amazetech.png",
     categories: ["web", "seo"], 
@@ -72,7 +72,7 @@ const projects: Project[] = [
   },
   {
     title: "Noma Fashion",
-    description: "A clean, high-fashion storefront for Noma Fashion, showcasing abayas, gowns, and women’s wear with refined imagery, clear product categories, and a seamless checkout experience. Fully responsive and built to enhance both style and conversion.",
+    description: "A high-fashion storefront for Noma Fashion, showing abayas, gowns, and women's wear with refined imagery, clear product categories, and a short checkout path. Fully responsive.",
     image: "images/noma-logo.png",
     previewImage: "images/noma.png",
     categories: ["web"], 
@@ -81,7 +81,7 @@ const projects: Project[] = [
   },
   {
     title: "Protein Warehouse Lebanon",
-    description: "A polished, responsive digital storefront for Proten Warehouse, specializing in supplements and wellness products. With clear visuals, fast-loading pages, and full device compatibility, it’s structured to guide visitors from browsing to checkout effortlessly.",
+    description: "A responsive storefront for Protein Warehouse Lebanon, selling supplements and wellness products. Clear product visuals, fast-loading pages, and a short path from browsing to checkout.",
     image: "images/pwl-logo.webp",
     previewImage: "images/pwl.png",
     categories: ["web"], 
@@ -90,7 +90,7 @@ const projects: Project[] = [
   },
   {
     title: "Top Designs HD",
-    description: "An artfully crafted, fully responsive agency website for Top Designs HD—highlighting branding solutions, digital marketing campaigns, and media production. Rich in visuals, seamless in navigation, and structured to convert visitors into clients.",
+    description: "A responsive agency website for Top Designs HD covering branding, digital marketing campaigns, and media production. Visual-heavy, with a clear route from portfolio to enquiry.",
     image: "images/topdesigns-logo.png",
     previewImage: "images/topdesigns.png",
     categories: ["web"], 
@@ -99,7 +99,9 @@ const projects: Project[] = [
   },
   {
     title: "Fit District",
-    description: "An artfully crafted, fully responsive agency website for Top Designs HD—highlighting branding solutions, digital marketing campaigns, and media production. Rich in visuals, seamless in navigation, and structured to convert visitors into clients.",
+    // TODO (needs input from JUSTECH): real description. The previous copy here was
+    // duplicated from Top Designs HD and described the wrong client.
+    description: "Responsive website design and development for Fit District.",
     image: "images/fd-logo.webp",
     previewImage: "images/fd.png",
     categories: ["web"], 
@@ -108,7 +110,7 @@ const projects: Project[] = [
   },
   {
     title: "The Yas Design",
-    description: "A beautifully crafted, fully responsive e-commerce platform for The Yas Design, celebrating planners, notebooks, and desk-essentials. With fine-tuned visuals, intuitive product flows, and mobile + desktop polish, it’s built to turn style lovers into repeat customers.",
+    description: "A responsive e-commerce platform for The Yas Design, selling planners, notebooks, and desk essentials. Considered product photography, simple product flows, and mobile and desktop parity.",
     image: "images/theyasdesign-logo.webp",
     previewImage: "images/theyasdesign.png",
     categories: ["web", "seo"], 
@@ -117,7 +119,9 @@ const projects: Project[] = [
   },
   {
     title: "Maseertak",
-    description: "A beautifully crafted, fully responsive e-commerce platform for The Yas Design, celebrating planners, notebooks, and desk-essentials. With fine-tuned visuals, intuitive product flows, and mobile + desktop polish, it’s built to turn style lovers into repeat customers.",
+    // TODO (needs input from JUSTECH): real description. The previous copy here was
+    // duplicated from The Yas Design and described the wrong client.
+    description: "Ongoing maintenance and support on an existing WordPress site: hosting, updates, and fixes.",
     image: "images/maseertak-logo.png",
     previewImage: "images/maseertak.png",
     categories: ["maintenance"], 
@@ -126,7 +130,9 @@ const projects: Project[] = [
   },
   {
     title: "GME",
-    description: "A beautifully crafted, fully responsive e-commerce platform for The Yas Design, celebrating planners, notebooks, and desk-essentials. With fine-tuned visuals, intuitive product flows, and mobile + desktop polish, it’s built to turn style lovers into repeat customers.",
+    // TODO (needs input from JUSTECH): real description. The previous copy here was
+    // duplicated from The Yas Design and described the wrong client.
+    description: "Ongoing maintenance and support on an existing WordPress site: hosting, updates, and fixes.",
     image: "images/gme-logo.png",
     previewImage: "images/gme.png",
     categories: ["maintenance"], 
@@ -135,7 +141,9 @@ const projects: Project[] = [
   },
   {
     title: "Alkoun Business",
-    description: "A beautifully crafted, fully responsive e-commerce platform for The Yas Design, celebrating planners, notebooks, and desk-essentials. With fine-tuned visuals, intuitive product flows, and mobile + desktop polish, it’s built to turn style lovers into repeat customers.",
+    // TODO (needs input from JUSTECH): real description. The previous copy here was
+    // duplicated from The Yas Design and described the wrong client.
+    description: "Search engine optimization engagement for Alkoun Business.",
     image: "images/alkoun-logo.png",
     previewImage: "images/alkoun.png",
     categories: ["seo"], 
@@ -158,11 +166,35 @@ const projects: Project[] = [
     <section id="portfolio" className="bg-dark p-5 z-0 pt-4 pb-16 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="text-center space-y-4 mb-16">
-          <h2>
+          <h1>
             <span className="text-5xl sm:text-6xl md:text-7xl tracking-tight text-white">Our </span>
             <span className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-blue-400">Portfolio</span>
-          </h2>
+          </h1>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            Web and software projects delivered for clients across Lebanon and MENA.
+          </p>
         </div>
+        {/*
+          Featured client. This is the only block on the page with a story attached.
+          TODO (needs input from JUSTECH): turn the remaining projects into real case
+          studies using problem -> constraint -> approach -> what we built -> result.
+          The constraint is what separates a case study from a brag, so it is the field
+          worth writing down first. Rut Essentials below still needs its problem,
+          constraint, and result filled in.
+        */}
+        <div className="max-w-3xl mx-auto mb-16 gradient-border rounded-2xl p-8 md:p-10 bg-dark-lighter text-left">
+          <p className="text-xs font-semibold uppercase tracking-widest text-blue-light mb-4">
+            Featured client
+          </p>
+          <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            Rut Essentials: <span className="gradient-text">five projects and counting</span>.
+          </h3>
+          <p className="text-lg text-gray-300">
+            Five separate builds plus an ongoing maintenance and management retainer.
+            The clearest signal we know how to give: they keep coming back.
+          </p>
+        </div>
+
         <div className="flex flex-wrap justify-center gap-4 mb-12 ">
           {filters.map((filter) => (
             <Button

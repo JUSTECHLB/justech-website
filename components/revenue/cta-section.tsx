@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { discoveryLinkProps } from "@/lib/links";
 
 export default function CtaSection() {
 	return (
@@ -38,18 +39,18 @@ export default function CtaSection() {
 					transition={{ duration: 0.7 }}
 				>
 					<h2 className="text-4xl md:text-5xl xl:text-6xl font-bold mb-8 leading-tight tracking-tight">
-						Ready to <span className="gradient-text">Scale</span>{" "}
-						<br />
-						Your Revenue?
+						Start with the{" "}
+						<span className="gradient-text">number</span> <br />
+						you want to move.
 					</h2>
 					<p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-						Contact us today to discuss how our revenue scaling
-						services can help your business achieve sustainable
-						growth.
+						Tell us what the site is failing to do on a short call.
+						No charge, and we'll say plainly whether we can move
+						that number for you.
 					</p>
-					<Link href="/contact">
-						<Button className="bg-gradient-to-r from-white to-gray-100 text-dark hover:from-gray-100 hover:to-white px-10 py-7 text-xl h-auto rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
-							Schedule a Free Consultation
+					<Link {...discoveryLinkProps} className="inline-block w-full sm:w-auto">
+						<Button className="bg-gradient-to-r from-white to-gray-100 text-dark hover:from-gray-100 hover:to-white w-full sm:w-auto whitespace-normal px-6 sm:px-10 py-6 sm:py-7 text-base sm:text-xl h-auto rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group">
+							Book a discovery call
 							<ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform duration-300" />
 						</Button>
 					</Link>

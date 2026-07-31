@@ -8,7 +8,7 @@ export default function StrategizingGrowth() {
 			icon: <Target className="w-8 h-8 text-blue-light" />,
 			title: "Understand Your Business Model",
 			description:
-				"We dive deep into your business operations, revenue streams, and market position to gain a comprehensive understanding of your current state and potential.",
+				"We dive deep into your business operations, revenue streams, and market position to build a clear picture of your current state and potential.",
 			step: "01",
 		},
 		{
@@ -42,7 +42,7 @@ export default function StrategizingGrowth() {
 	];
 
 	return (
-		<section className="relative py-32 bg-gradient-to-b from-dark to-dark-lighter">
+		<section className="relative py-32 bg-gradient-to-b from-dark to-dark-lighter overflow-hidden">
 			<div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-blue/10 to-transparent rounded-full blur-[180px] -z-10"></div>
 
 			<div className="absolute inset-0 bg-grid-pattern opacity-[0.03] -z-10"></div>
@@ -65,7 +65,7 @@ export default function StrategizingGrowth() {
 						Growth
 					</h2>
 					<p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-						We begin with a comprehensive strategic approach to
+						We begin with a strategic approach to
 						understand your business and establish the foundation
 						for revenue scaling.
 					</p>

@@ -10,7 +10,7 @@ export default function ValueProposition() {
 			icon: <TrendingUp className="w-6 h-6 text-blue-light" />,
 			title: "Guaranteed Revenue Growth",
 			description:
-				"We're so confident in our ability to increase your revenue that we offer a performance-based pricing model—if you don't see growth, you don't pay the full fee. Our clients typically see a 25-145% increase in revenue within the first year.",
+				"We're so confident in our ability to increase your revenue that we offer a performance-based pricing model: if you don't see growth, you don't pay the full fee. Our clients typically see a 25-145% increase in revenue within the first year.",
 			stat: "Average 85% revenue increase in year one",
 			features: [
 				"Performance-based pricing model",
@@ -48,7 +48,7 @@ export default function ValueProposition() {
 	];
 
 	return (
-		<section className="relative py-32">
+		<section className="relative py-32 overflow-hidden">
 			<div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-to-br from-indigo/10 to-blue/5 rounded-full blur-[180px] -z-10"></div>
 			<div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-blue/5 to-transparent rounded-full blur-[120px] -z-10"></div>
 
@@ -75,7 +75,7 @@ export default function ValueProposition() {
 						<p className="text-xl text-gray-300 mb-8 leading-relaxed">
 							Our revenue scaling services deliver measurable,
 							sustainable growth that transforms your business. We
-							don't just promise results—we guarantee them.
+							don't just promise results, we guarantee them.
 						</p>
 						<Link href="/contact">
 							<Button className="bg-gradient-to-br from-dark-lighter to-dark hover:from-dark-lighter/80 hover:to-dark/80 text-white border border-blue/20 rounded-full px-8 py-6 text-lg h-auto group transition-all duration-300">

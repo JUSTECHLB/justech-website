@@ -1,7 +1,16 @@
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+	title: "Privacy Policy",
+	description:
+		"How JUSTECH collects, uses, and protects personal information.",
+	path: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
 	return (
@@ -18,8 +27,8 @@ export default function PrivacyPolicyPage() {
 					</p>
 				</div>
 
-				<div className="gradient-border p-8 rounded-2xl mb-12">
-					<div className="prose prose-lg prose-invert max-w-none">
+				<div className="gradient-border p-6 sm:p-8 rounded-2xl mb-12">
+					<div className="prose prose-base sm:prose-lg prose-invert max-w-none break-words [overflow-wrap:anywhere]">
 						<p className="text-gray-300">
 							This Privacy Policy describes how your personal
 							information is collected, used, and shared when you

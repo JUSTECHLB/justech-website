@@ -14,7 +14,7 @@ export default function SuccessStories() {
       challenge:
         "Struggling with inefficient project management processes leading to missed deadlines and budget overruns.",
       solution:
-        "Implemented a comprehensive workflow optimization strategy with integrated project management tools and standardized processes.",
+        "Implemented a workflow optimization strategy with integrated project management tools and standardized processes.",
       results: [
         { label: "Project Delivery Time", value: "-35%", icon: <TrendingUp /> },
         { label: "Resource Utilization", value: "+42%", icon: <Building /> },

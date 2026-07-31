@@ -1,0 +1,130 @@
+# JUSTECH: full content
+
+> JUSTECH is a software engineering company based in Beirut, Lebanon. We scale revenue, automate operations, and modernize the technology businesses run on. Founded 2019. Clients across Lebanon and the wider MENA region.
+
+Contact: Beirut, Lebanon. +961 78 890 304. contact@justechlb.com. https://justechlb.com
+Book a free discovery call: https://calendly.com/omar-chouman0/justech-discovery-call-with-omar-chouman
+
+---
+
+## Positioning
+
+Software that moves the number you care about.
+
+Work is organised around three problems rather than three product lines. Most clients arrive with one of them, and some end up with all three. Each pillar states the metric it is accountable for, which is unusual for an agency in this region and is deliberate.
+
+**Revenue scaling.** For "we're getting traffic but no enquiries." Websites, SEO, and e-commerce built to convert, plus the AI layer on top: chatbots that capture leads, scoring that tells a sales team who is worth calling. Measured in qualified leads per month and conversion rate.
+
+**Business operation optimization.** For "my team is drowning in manual work." Odoo implementation, workflow automation, internal systems, and dashboards. This is where AI does the most useful work in a business: reading documents, routing tickets, forecasting demand. Measured in hours saved per week and error rate.
+
+**Tech transformation.** For "our system is old and can't handle growth." AWS migration, DevOps, legacy modernization, custom applications, microservices, and machine learning infrastructure. Measured in uptime, load capacity, and infrastructure cost.
+
+## Technology
+
+We are not tied to a stack. We pick the language and architecture that fit the problem, the client's team, and the ten-year cost, not the one we happen to know.
+
+What we build with: Next.js, React, Angular, Node.js, Python (FastAPI, Django), Go, .NET, Laravel, PostgreSQL, MongoDB, Redis, Docker, AWS, PyTorch.
+
+Platforms we implement: Odoo, Shopify, WordPress.
+
+Certifications held: AWS Solutions Architect, AWS Cloud Practitioner, HubSpot, SEO.
+
+## How to engage JUSTECH
+
+There are two distinct steps, and they are often confused.
+
+**Discovery call.** Free, booked at https://calendly.com/omar-chouman0/justech-discovery-call-with-omar-chouman. A short call to understand the problem. The client describes what is not working, we ask questions, and we say whether we can help and what the right next step is. No document, no obligation, no invoice. Every relationship starts here.
+
+**Technical consultation.** A paid, fixed-fee, time-boxed engagement. We go into the code, the infrastructure, and the numbers, and produce a written recommendation the client owns and can act on. The fee is agreed before the work starts and never depends on what we find. If the client proceeds with the project, the fee is credited in full against it. If not, they keep the document.
+
+Why the consultation is paid work: a free proposal is written to win the work, so it takes the client's description of the problem at face value, prices what was asked for, and stays quiet about anything that would make the number bigger or the timeline longer. There is no budget to investigate before the contract is signed, so the investigation happens afterwards, during the build, at the client's cost. Paying for the diagnosis changes the incentive.
+
+What a technical consultation covers: the problem restated until both sides agree on it; the current stack, what it costs and what breaks; where the data lives and how many copies exist; which commercial number the work is supposed to move; constraints including team, budget, and timeline; and where the real risk sits if nothing changes.
+
+What the client walks away with: a written recommendation specific enough to act on, a scope and realistic range for cost and duration, the options we rejected and why, a document they own, and an honest answer including when the answer is that they do not need us yet.
+
+## Revenue scaling
+
+Turn your website into pipeline. Most business websites are brochures. They look fine, they get some traffic, and they produce almost no enquiries. That is not a design problem, it is a structure problem.
+
+Symptoms: traffic comes in but enquiries do not; invisible on Google for the terms customers actually search; the site looks good but nobody can tell what the business does in five seconds; no idea which channel produced the last ten customers; carts get abandoned with no visibility into where.
+
+Services: website design, website development, SEO optimization, e-commerce, CRM and analytics setup, AI chatbots and lead capture, lead scoring.
+
+Measured in: qualified enquiries per month, conversion rate, organic traffic for terms that convert rather than vanity keywords, revenue per visitor.
+
+Reference: AGS Solutions, a business website scoped, built, and delivered in a short window with requirements captured accurately the first time.
+
+## Business operation optimization
+
+Stop running your business on spreadsheets and WhatsApp. Manual work does not announce itself. It hides in the hour someone spends retyping invoices, the report that takes two days to assemble, the order that got missed because it lived in a chat thread.
+
+Symptoms: the same data entered in three places; no single view of stock, cash, or what has actually been ordered; month-end reporting takes days; when one person is on leave part of the business stops; decisions made on numbers that are two weeks old.
+
+Services: Odoo and ERP implementation, workflow automation, internal systems and admin panels, custom business applications, integrations between existing tools, dashboards and BI, AI document processing, intelligent routing, demand forecasting.
+
+Measured in: hours saved per week, error rate, cost per transaction, time from question to answer.
+
+Reference: Rut Essentials, five separate projects plus an ongoing maintenance and management retainer.
+
+## Tech transformation
+
+Infrastructure that survives your next growth stage. Systems do not fail gradually. They work until the day the load doubles, the developer who built it leaves, or someone asks a security question nobody can answer.
+
+Symptoms: the system slows or breaks when traffic spikes; nobody left at the company understands the original code; deployments are manual and everyone holds their breath; backups exist but a restore has never been tested; a client asked about security posture and got no answer.
+
+Services: AWS cloud migration and architecture, DevOps and CI/CD, legacy modernization and replatforming, web and mobile application development, microservices architecture, machine learning model training and deployment, MLOps, security hardening and disaster recovery, performance engineering, technical due diligence, support retainers.
+
+Measured in: uptime, deploy frequency, load capacity, infrastructure cost, security posture.
+
+## Odoo implementation
+
+One system instead of nine spreadsheets. Odoo implementation, migration, and customization for businesses in Lebanon and MENA.
+
+Modules implemented: inventory and warehouse, accounting and invoicing, sales and CRM, purchase and vendor management, manufacturing (MRP), point of sale, HR and payroll, project and timesheets, e-commerce and website, and custom modules.
+
+Sequence: process mapping, scoping, configuration, data migration, custom development, integration, training and handover, then a support retainer.
+
+Measured in: hours saved per week, stock accuracy, days to close the month, and the number of places a single piece of data has to be entered.
+
+## AWS consulting and DevOps
+
+Deployments that stop being an event. AWS migration, cloud architecture, and the delivery pipeline around it.
+
+Capabilities: AWS migration and landing zone setup, cloud architecture review, infrastructure as code with Terraform or CDK, CI/CD pipelines, containers (Docker, ECS, EKS), serverless (Lambda, API Gateway), monitoring and alerting, cost optimization, backup and disaster recovery, security hardening and IAM, database migration and tuning, support retainers.
+
+Sequence: inventory, target architecture, landing zone, pipeline first, migrate in slices with tested rollback, rehearsed cut over, harden and tune, then handover with runbooks.
+
+Measured in: uptime, deploy frequency, time to restore, infrastructure cost per transaction, load capacity before the first failure.
+
+## AI and machine learning
+
+Most AI projects fail at integration, not at the model. We build the pipeline, the deployment, and the connection to the systems a business already runs. Then the model is the easy part.
+
+Calling a model API is an afternoon's work and much of the market sells exactly that. The engineering is everything around it: getting clean data out of the systems that hold it, handling the cases the model gets wrong, deciding what happens when it is not confident, and running the whole thing reliably at real volume.
+
+Use cases: document extraction (invoices, delivery notes, purchase orders, contracts read automatically into accounting or ERP); ticket and enquiry routing by intent, urgency, and owner; demand forecasting from sales and stock history; internal copilots with a retrieval layer over company policies, contracts, and product data; lead capture and scoring.
+
+Working principles: start from the metric, use the smallest thing that works, build the data path first, design for the wrong answer with confidence thresholds and human review, deploy properly with versioned models and monitoring, and hand it over with documentation and access.
+
+AI is treated as a layer across the three pillars rather than a fourth pillar or a standalone product.
+
+## Company
+
+Founded in Beirut in 2019. Within months the country went into the protests, then the banking collapse, then the port explosion, then COVID. Payment rails stopped working and many software companies in Lebanon closed in that window. JUSTECH is still operating and still shipping.
+
+Clients include Rut Essentials, AGS Solutions, Lebotics, Ensemble Renard, Clover Mind Solutions, and The Yas Design. Rut Essentials is five separate builds plus an ongoing maintenance and management retainer.
+
+## Frequently asked questions
+
+**What is the difference between the discovery call and the technical consultation?** The discovery call is free and short: the client describes what is not working and we work out whether we can help. The technical consultation is a paid, fixed-fee engagement that goes into the code, the infrastructure, and the numbers and produces a written recommendation the client owns. Everyone starts with the discovery call.
+
+**What does a technical consultation cost?** The fee is fixed and agreed before the work starts, so it never depends on what we find. If the client proceeds with the project, the fee is credited in full against it. If not, they keep the written recommendation and owe nothing further.
+
+**What do clients get at the end of it?** A written recommendation specific enough to act on: the problem restated accurately, a scope with a realistic range for cost and duration, the options we rejected and why, and an honest answer about whether the work is worth doing at all.
+
+**Is it useful for a company that already has a development team?** Often more so. With an in-house team the conversation is usually about architecture decisions, cloud and deployment practice, or an outside read on whether a plan holds up. We are not there to replace engineers and will say so when a team can handle the work itself.
+
+**Do you work with clients outside Lebanon?** Yes. Based in Beirut, working across Lebanon and the wider MENA region including the Gulf. Consultations run remotely unless the client prefers to meet in Beirut.
+
+**What technologies do you work in?** Not tied to a stack. Next.js, React, Angular, Node.js, Python, Go, .NET, Laravel, PostgreSQL, MongoDB, Redis, Docker, AWS, and PyTorch, plus Odoo, Shopify, and WordPress implementations.

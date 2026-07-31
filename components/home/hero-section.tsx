@@ -3,12 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Code, Database, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { TypewriterEffect } from "@/components/typewriter-effect";
 import { useEffect, useState, useRef } from "react";
+import { discoveryLinkProps } from "@/lib/links";
 
+// Top-aligned on short viewports so the copy stays above the fold; centred on
+// tall desktop monitors, where an 88vh section otherwise leaves several hundred
+// pixels of dead space under the content.
 export default function HeroSection() {
 	return (
-		<section className="relative min-h-[80vh] md:min-h-[88vh] flex items-start overflow-hidden pt-24 md:pt-36 pb-8 md:pb-10 bg-dark">
+		<section className="relative min-h-[80vh] md:min-h-[88vh] flex items-start xl:items-center overflow-hidden pt-24 md:pt-36 xl:pt-20 pb-8 md:pb-10 xl:pb-20 bg-dark">
 			<div className="absolute inset-0 bg-dark z-0"></div>
 			<div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue/10 rounded-full blur-[120px] -z-10"></div>
 			<div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-indigo/10 rounded-full blur-[100px] -z-10"></div>
@@ -23,82 +26,34 @@ export default function HeroSection() {
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 					<div className="pt-0 lg:pt-0">
 						<h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-							We Create <br />
+							Software that moves the{" "}
 							<span className="gradient-text">
-								Digital Solutions
+								number you care about
 							</span>
-							<br />
-							<span className="relative inline-block">
-								<TypewriterEffect
-									words={[
-										"That Deliver",
-										"That Transform",
-										"That Innovate",
-										"That Succeed",
-									]}
-									className=""
-									cursorClassName="gradient-text"
-								/>
-								<svg
-									className="absolute -bottom-2 left-0 w-full"
-									viewBox="0 0 200 8"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M1 5.5C47.6667 1.5 154.4 -1.9 199 5.5"
-										stroke="url(#paint0_linear)"
-										strokeWidth="2"
-									/>
-									<defs>
-										<linearGradient
-											id="paint0_linear"
-											x1="1"
-											y1="5"
-											x2="199"
-											y2="5"
-											gradientUnits="userSpaceOnUse"
-										>
-											<stop stopColor="#4dabf7" />
-											<stop
-												offset="1"
-												stopColor="#228be6"
-											/>
-										</linearGradient>
-									</defs>
-								</svg>
-							</span>
+							.
 						</h1>
 
 						<p className="text-xl text-gray-400 mb-10 max-w-xl">
-							Tech company specialized in scaling revenue,
-							optimizing operational structure and automating
-							workflows.
+							We scale revenue, automate operations, and modernize
+							the technology underneath. Software engineers in
+							Beirut, working across Lebanon and MENA since 2019.
 						</p>
 
 						<div className="flex flex-col sm:flex-row gap-4">
-							<Link href="/contact">
-								<Button className="bg-gradient-to-r from-blue to-indigo hover:opacity-90 text-white px-8 py-6 text-lg h-auto rounded-full">
-									Get Started
+							<Link {...discoveryLinkProps} className="inline-block w-full sm:w-auto">
+								<Button className="bg-gradient-to-r from-blue to-indigo hover:opacity-90 text-white w-full sm:w-auto whitespace-normal px-6 sm:px-8 py-6 text-base sm:text-lg h-auto rounded-full">
+									Book a discovery call
 									<ArrowRight className="ml-2 h-5 w-5" />
 								</Button>
 							</Link>
-							<a href="#services" className="inline-block">
+							<Link href="/portfolio">
 								<Button
 									variant="outline"
-									className="border-blue/20 hover:bg-dark-lighter text-white px-8 py-6 text-lg h-auto rounded-full"
-									onClick={(e) => {
-										e.preventDefault();
-										document
-											.getElementById("services")
-											?.scrollIntoView({
-												behavior: "smooth",
-											});
-									}}
+									className="border-blue/20 hover:bg-dark-lighter text-white w-full sm:w-auto whitespace-normal px-6 sm:px-8 py-6 text-base sm:text-lg h-auto rounded-full"
 								>
-									Our Services
+									See the work
 								</Button>
-							</a>
+							</Link>
 						</div>
 					</div>
 
@@ -615,7 +570,7 @@ function EnhancedAnimatedLogo() {
 
 					<div className="relative w-48 h-48 flex items-center justify-center">
 						<Image
-							src="jt.webp"
+							src="/jt.webp"
 							alt="JusTech Logo"
 							width={150}
 							height={150}

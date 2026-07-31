@@ -1,0 +1,43 @@
+# JUSTECH
+
+> JUSTECH is a software engineering company based in Beirut, Lebanon, working with clients across Lebanon and the wider MENA region since 2019. We scale revenue, automate operations, and modernize the technology businesses run on.
+
+Work is organised around three pillars. Most clients arrive with one of them.
+
+- **Revenue scaling** for "we're getting traffic but no enquiries". Measured in qualified leads per month and conversion rate.
+- **Business operation optimization** for "my team is drowning in manual work". Measured in hours saved per week and error rate.
+- **Tech transformation** for "our system is old and can't handle growth". Measured in uptime, load capacity, and infrastructure cost.
+
+We are not tied to a stack. We build with Next.js, React, Angular, Node.js, Python (FastAPI, Django), Go, .NET, Laravel, PostgreSQL, MongoDB, Redis, Docker, AWS, and PyTorch, and we implement Odoo, Shopify, and WordPress. Certifications held: AWS Solutions Architect, AWS Cloud Practitioner, HubSpot, SEO.
+
+How to engage us: every relationship starts with a free discovery call, booked at https://calendly.com/omar-chouman0/justech-discovery-call-with-omar-chouman. From there the next step is either a paid technical consultation (fixed fee, ends in a written recommendation you own, credited against the project if you proceed) or a project.
+
+## Pillars
+
+- [Revenue scaling](https://justechlb.com/revenue-scaling): Websites, SEO, e-commerce, CRM and analytics setup, AI chatbots and lead capture, and lead scoring. For businesses whose site produces traffic but not enquiries.
+- [Business operation optimization](https://justechlb.com/business-operation-optimization): Odoo and ERP implementation, workflow automation, internal systems and admin panels, integrations, dashboards and BI, AI document processing, intelligent routing, and demand forecasting.
+- [Tech transformation](https://justechlb.com/tech-transformation): AWS cloud migration and architecture, DevOps and CI/CD, legacy modernization, web and mobile application development, microservices, machine learning infrastructure, security hardening, and performance engineering.
+
+## Services
+
+- [Technical consultation](https://justechlb.com/consultation): A paid, fixed-fee, time-boxed engagement covering code and architecture, infrastructure, cloud and AWS and DevOps, or operations and automation. Ends in a written recommendation the client owns. Distinct from the free discovery call.
+- [Odoo implementation in Lebanon](https://justechlb.com/services/odoo): Odoo implementation, migration, and customization. Inventory, accounting, sales, purchasing, manufacturing, point of sale, HR, and custom modules.
+- [AWS consulting and DevOps in Lebanon](https://justechlb.com/services/aws-devops): AWS migration and landing zones, cloud architecture review, infrastructure as code, CI/CD, containers, serverless, monitoring, cost optimization, disaster recovery, and security hardening.
+- [Website design in Lebanon](https://justechlb.com/services/web-design): Responsive website design for businesses in Lebanon and MENA.
+- [Custom software development in Lebanon](https://justechlb.com/services/web-development): Web and custom application development.
+- [SEO in Lebanon](https://justechlb.com/services/seo): Search engine optimization aimed at terms that convert rather than vanity keywords.
+- [AI and machine learning](https://justechlb.com/ai): Document extraction, ticket and enquiry routing, demand forecasting, internal copilots over company documents, and lead capture and scoring. Positioned as a layer across the three pillars rather than a standalone product.
+
+## Company
+
+- [About](https://justechlb.com/about): Founded in Beirut in 2019 and still operating through the protests, the banking collapse, the port explosion, and COVID.
+- [Portfolio](https://justechlb.com/portfolio): Web and software projects delivered for clients across Lebanon and MENA, including Rut Essentials, AGS Solutions, Lebotics, Ensemble Renard, Clover Mind Solutions, and The Yas Design.
+- [Contact](https://justechlb.com/contact): Beirut, Lebanon. +961 78 890 304. contact@justechlb.com.
+- [Book a discovery call](https://calendly.com/omar-chouman0/justech-discovery-call-with-omar-chouman): Free, no obligation. The first step for every engagement.
+- [Blog](https://justechlb.com/blog): Notes on software engineering, web development, SEO, and automation.
+
+## Optional
+
+- [Full site content](https://justechlb.com/llms-full.txt): Positioning, pillar detail, service detail, and frequently asked questions in one file.
+- [Privacy policy](https://justechlb.com/privacy-policy)
+- [Terms of service](https://justechlb.com/terms-of-service)

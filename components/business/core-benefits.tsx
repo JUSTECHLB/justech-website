@@ -85,7 +85,7 @@ export default function CoreBenefits() {
             </span>
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Our comprehensive approach to business operation optimization delivers measurable improvements across your
+            Our approach to business operation optimization delivers measurable improvements across your
             entire organization.
           </p>
         </motion.div>

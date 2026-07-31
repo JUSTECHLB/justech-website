@@ -7,12 +7,46 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import RadialBackground from "@/components/radial-background";
 import Script from "next/script";
+import JsonLd from "@/components/seo/json-ld";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "JUSTECH - Software Development Agency",
-	description: "JUSTECH is a leading software development agency specializing in website design, development, and SEO optimization.",
+	metadataBase: new URL(SITE_URL),
+	title: {
+		default: "JUSTECH | Software Engineering in Beirut",
+		template: "%s | JUSTECH",
+	},
+	description: SITE_DESCRIPTION,
+	alternates: {
+		canonical: "/",
+	},
+	openGraph: {
+		type: "website",
+		siteName: SITE_NAME,
+		locale: "en_US",
+		url: "/",
+		title: "JUSTECH | Software Engineering in Beirut",
+		description: SITE_DESCRIPTION,
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "JUSTECH | Software Engineering in Beirut",
+		description: SITE_DESCRIPTION,
+	},
+	robots: {
+		index: true,
+		follow: true,
+		googleBot: {
+			index: true,
+			follow: true,
+			"max-image-preview": "large",
+			"max-snippet": -1,
+			"max-video-preview": -1,
+		},
+	},
 	icons: {
 		icon: "/favicon.ico",
 	},
@@ -20,16 +54,6 @@ export const metadata: Metadata = {
 	verification: {
 		google: "2S2GPbcMRUzlWyQNYIsfRbMoe3kVd5tbHAGghQNiRdA",
 	},
-};
-
-export const images = {
-	remotePatterns: [
-		{
-			protocol: "https",
-			hostname: "justechlb.com",
-			pathname: "/wp-content/uploads/**",
-		},
-	],
 };
 
 export default function RootLayout({
@@ -40,6 +64,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head>
+				<JsonLd schema={organizationSchema} id="schema-organization" />
+				<JsonLd schema={websiteSchema} id="schema-website" />
+
 				{/* Google Analytics */}
 				<Script
 					src="https://www.googletagmanager.com/gtag/js?id=G-HX43RFX1JP"
@@ -50,7 +77,7 @@ export default function RootLayout({
 						window.dataLayer = window.dataLayer || [];
 						function gtag(){dataLayer.push(arguments);}
 						gtag('js', new Date());
-						gtag('config', 'G-YOUR_GA_ID_HERE');
+						gtag('config', 'G-HX43RFX1JP');
 					`}
 				</Script>
 			</head>

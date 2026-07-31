@@ -27,3 +27,5 @@ yarn-error.log*
 next-env.d.ts
 
 contact-submissions
+# playwright mcp session artifacts (screenshots, console logs)
+.playwright-mcp/

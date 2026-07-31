@@ -2,6 +2,15 @@ import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
 import Link from "next/link"
+import type { Metadata } from "next"
+import { pageMetadata } from "@/lib/seo"
+
+export const metadata: Metadata = pageMetadata({
+  title: "Blog",
+  description:
+    "Notes on software engineering, web development, SEO, and automation from the JUSTECH team in Beirut.",
+  path: "/blog",
+});
 
 interface BlogPost {
   slug: string

@@ -11,7 +11,6 @@ import { cn } from "@/lib/utils";
 export default function Navbar() {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const pathname = usePathname();
-	console.log("CURRENT PATH:", pathname);
 
 	const navItems = [
 		{ label: "Revenue Scaling", href: "/revenue-scaling" },
@@ -44,7 +43,7 @@ export default function Navbar() {
 					<Link href="/" className="flex items-center">
 						<div className="relative w-10 h-10 mr-2">
 							<img
-								src="jt.webp"
+								src="/jt.webp"
 								alt="JUSTECH Logo"
 								className="w-full h-full object-contain"
 							/>
@@ -53,7 +52,7 @@ export default function Navbar() {
 					</Link>
 
 					{/* DESKTOP */}
-					<div className="hidden md:flex items-center gap-8">
+					<div className="hidden lg:flex items-center gap-8">
 						{navItems.map((item) => (
 							<Link
 								key={item.href}
@@ -68,14 +67,14 @@ export default function Navbar() {
 						))}
 					</div>
 
-					<Link href="/contact" className="hidden md:block">
+					<Link href="/contact" className="hidden lg:block">
 						<Button className="bg-gradient-to-r from-blue to-indigo hover:opacity-90 text-white rounded-full px-6">
-							Contact Us
+							Talk to us
 						</Button>
 					</Link>
 
 					<button
-						className="md:hidden text-white"
+						className="lg:hidden text-white"
 						onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
 					>
 						{mobileMenuOpen ? (
@@ -90,7 +89,7 @@ export default function Navbar() {
 			{/* BACKDROP */}
 			{mobileMenuOpen && (
 				<div
-					className="fixed inset-0 bg-dark/95 backdrop-blur-sm z-[60] md:hidden"
+					className="fixed inset-0 bg-dark/95 backdrop-blur-sm z-[60] lg:hidden"
 					onClick={() => setMobileMenuOpen(false)}
 				/>
 			)}
@@ -98,7 +97,7 @@ export default function Navbar() {
 			{/* MOBILE MENU */}
 			<div
 				className={cn(
-					"fixed inset-0 bg-dark z-[60] px-6 pt-6 pb-6 md:hidden transition-transform duration-300 overflow-y-auto flex flex-col",
+					"fixed inset-0 bg-dark z-[60] px-6 pt-6 pb-6 lg:hidden transition-transform duration-300 overflow-y-auto flex flex-col",
 					mobileMenuOpen ? "translate-x-0" : "translate-x-full"
 				)}
 			>
@@ -110,7 +109,7 @@ export default function Navbar() {
 					>
 						<div className="relative w-8 h-8 mr-2">
 							<img
-								src="jt.webp"
+								src="/jt.webp"
 								alt="JUSTECH Logo"
 								className="w-full h-full object-contain"
 							/>
@@ -158,7 +157,7 @@ export default function Navbar() {
 						onClick={() => setMobileMenuOpen(false)}
 					>
 						<Button className="bg-gradient-to-r from-blue to-indigo text-white w-full rounded-full">
-							Contact Us
+							Talk to us
 						</Button>
 					</Link>
 				</div>

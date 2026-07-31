@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { discoveryLinkProps } from "@/lib/links";
 
 const animationStyles = `
   @keyframes spin {
@@ -54,9 +55,9 @@ export default function RevenueHero() {
 						transition={{ duration: 0.8 }}
 						className="order-2 lg:order-1 space-y-8"
 					>
-						<h1 className="text-6xl md:text-7xl xl:text-8xl font-bold leading-[1.1] tracking-tight">
+						<h1 className="text-5xl md:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight">
 							<span className="block text-white/80 font-light">
-								Elevate Your
+								Turn your website
 							</span>
 							<motion.span
 								initial={{ backgroundPosition: "0% 50%" }}
@@ -68,29 +69,22 @@ export default function RevenueHero() {
 								}}
 								className="gradient-text bg-gradient-to-r from-blue-light via-blue to-indigo bg-clip-text text-transparent bg-size-200"
 							>
-								Revenue
+								into pipeline.
 							</motion.span>
 						</h1>
 
 						<p className="text-xl text-gray-300 max-w-xl leading-relaxed">
-							Our precision-engineered revenue scaling system
-							delivers measurable growth through strategic
-							optimization and market expansion.
+							Most business websites are brochures. They look
+							fine, they get some traffic, and they produce almost
+							no enquiries. That's not a design problem, it's a
+							structure problem.
 						</p>
 
 						<div className="flex flex-col sm:flex-row gap-4 pt-4">
-							<Link href="/contact">
-								<Button className="bg-gradient-to-r from-blue to-blue-dark text-white px-8 py-6 text-lg h-auto rounded-full group transition-all duration-300 shadow-lg shadow-blue/20 hover:shadow-blue/30 hover:scale-105">
-									<span>Scale Your Business</span>
+							<Link {...discoveryLinkProps} className="inline-block w-full sm:w-auto">
+								<Button className="bg-gradient-to-r from-blue to-blue-dark text-white w-full sm:w-auto whitespace-normal px-6 sm:px-8 py-6 text-base sm:text-lg h-auto rounded-full group transition-all duration-300 shadow-lg shadow-blue/20 hover:shadow-blue/30 hover:scale-105">
+									<span>Book a discovery call</span>
 									<ArrowUpRight className="ml-2 h-5 w-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-								</Button>
-							</Link>
-							<Link href="/contact">
-								<Button
-									variant="outline"
-									className="border-blue/20 hover:bg-dark-lighter text-white px-8 py-6 text-lg h-auto rounded-full backdrop-blur-sm hover:border-blue/40 transition-all duration-300"
-								>
-									Schedule Consultation
 								</Button>
 							</Link>
 						</div>
@@ -101,32 +95,26 @@ export default function RevenueHero() {
 							transition={{ delay: 0.3, duration: 0.6 }}
 							className="bg-gradient-to-r from-dark-lighter/90 to-dark/90 backdrop-blur-md border border-blue/20 rounded-xl p-5 shadow-lg mt-8"
 						>
+							<p className="text-xs font-semibold uppercase tracking-widest text-blue-light mb-4 text-center">
+								What we measure
+							</p>
 							<div className="grid grid-cols-3 divide-x divide-blue/10">
 								<div className="px-4 flex flex-col items-center text-center">
 									<TrendingUp className="h-6 w-6 text-blue-light mb-2" />
-									<p className="text-sm text-gray-400 font-medium">
-										Average Growth
-									</p>
-									<p className="text-xl font-bold gradient-text">
-										85%
-									</p>
-								</div>
-								<div className="px-4 flex flex-col items-center text-center">
-									<Clock className="h-6 w-6 text-blue-light mb-2" />
-									<p className="text-sm text-gray-400 font-medium">
-										Implementation
-									</p>
-									<p className="text-xl font-bold gradient-text">
-										30 days
+									<p className="text-sm font-medium text-gray-300">
+										Qualified enquiries per month
 									</p>
 								</div>
 								<div className="px-4 flex flex-col items-center text-center">
 									<BarChart className="h-6 w-6 text-blue-light mb-2" />
-									<p className="text-sm text-gray-400 font-medium">
-										Client ROI
+									<p className="text-sm font-medium text-gray-300">
+										Conversion rate
 									</p>
-									<p className="text-xl font-bold gradient-text">
-										3.5x
+								</div>
+								<div className="px-4 flex flex-col items-center text-center">
+									<Clock className="h-6 w-6 text-blue-light mb-2" />
+									<p className="text-sm font-medium text-gray-300">
+										Revenue per visitor
 									</p>
 								</div>
 							</div>
@@ -183,7 +171,7 @@ export default function RevenueHero() {
 										Revenue Scaling
 									</h3>
 									<p className="text-sm text-gray-300">
-										Precision-engineered growth
+										Traffic that turns into pipeline
 									</p>
 								</motion.div>
 							</div>
@@ -261,26 +249,16 @@ export default function RevenueHero() {
 							<div className="flex items-center gap-6">
 								<div className="flex items-center gap-2">
 									<TrendingUp className="h-5 w-5 text-blue-light" />
-									<div>
-										<p className="text-xs text-gray-400">
-											Q4 Growth
-										</p>
-										<p className="text-sm font-bold gradient-text">
-											+145%
-										</p>
-									</div>
+									<p className="text-sm font-medium text-gray-200">
+										Enquiries
+									</p>
 								</div>
-								<div className="h-10 w-px bg-blue/20"></div>
+								<div className="h-6 w-px bg-blue/20"></div>
 								<div className="flex items-center gap-2">
 									<Users className="h-5 w-5 text-blue-light" />
-									<div>
-										<p className="text-xs text-gray-400">
-											Client Success
-										</p>
-										<p className="text-sm font-bold gradient-text">
-											98%
-										</p>
-									</div>
+									<p className="text-sm font-medium text-gray-200">
+										Conversion
+									</p>
 								</div>
 							</div>
 						</motion.div>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {
 	Facebook,
-	Twitter,
 	Instagram,
 	Linkedin,
 	Mail,
@@ -10,6 +9,7 @@ import {
 	ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { discoveryLinkProps } from "@/lib/links";
 
 export default function Footer() {
 	return (
@@ -18,17 +18,18 @@ export default function Footer() {
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
 					<div>
 						<h2 className="text-3xl md:text-4xl font-bold mb-6">
-							Ready to{" "}
-							<span className="gradient-text">Elevate</span> Your
-							Digital Presence?
+							Tell us what's{" "}
+							<span className="gradient-text">not working</span>.
 						</h2>
 						<p className="text-gray-400 text-lg mb-8 max-w-lg">
-							Let's discuss how we can help your business grow
-							with our digital solutions.
+							Traffic that never converts, a team buried in manual
+							work, a system that buckles under load. Start with
+							the problem and we'll tell you what it takes to fix
+							it.
 						</p>
-						<Link href="/contact">
+						<Link {...discoveryLinkProps}>
 							<Button className="bg-gradient-to-r from-blue to-indigo hover:opacity-90 text-white rounded-full px-6">
-								Get In Touch
+								Book a discovery call
 								<ArrowRight className="ml-2 h-4 w-4" />
 							</Button>
 						</Link>
@@ -37,7 +38,7 @@ export default function Footer() {
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						<div>
 							<h3 className="text-lg font-semibold mb-6 gradient-text">
-								Contact Us
+								Contact
 							</h3>
 							<ul className="space-y-4">
 								<li className="flex items-start">
@@ -74,7 +75,7 @@ export default function Footer() {
 							<h3 className="text-lg font-semibold mb-6 gradient-text">
 								Follow Us
 							</h3>
-							<div className="flex space-x-4 mb-8">
+							<div className="flex space-x-4">
 								<Link
 									href="https://www.facebook.com/justechlb"
 									className="w-10 h-10 rounded-full bg-dark-lighter border border-blue/20 flex items-center justify-center hover:border-blue-light transition-colors"
@@ -103,23 +104,6 @@ export default function Footer() {
 									/>
 								</Link>
 							</div>
-
-							<h3 className="text-lg font-semibold mb-4 gradient-text">
-								Newsletter
-							</h3>
-							<p className="text-gray-400 text-sm mb-4">
-								Subscribe to our newsletter for updates
-							</p>
-							<div className="flex">
-								<input
-									type="email"
-									placeholder="Your email"
-									className="bg-dark border border-blue/20 rounded-l-full px-4 py-2 w-full focus:outline-none focus:border-blue-light"
-								/>
-								<Button className="bg-gradient-to-r from-blue to-indigo hover:opacity-90 text-white rounded-r-full">
-									<ArrowRight className="h-4 w-4" />
-								</Button>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -138,8 +122,9 @@ export default function Footer() {
 							<span className="text-xl font-bold">JUSTECH</span>
 						</Link>
 						<p className="text-gray-400 text-sm">
-							JUSTECH is a leading software development agency
-							specialized in revenue scaling, business operation optimization, and tech transformation.
+							JUSTECH is a software engineering company in Beirut.
+							We scale revenue, automate operations, and modernize
+							the technology businesses run on.
 						</p>
 					</div>
 
@@ -148,8 +133,16 @@ export default function Footer() {
 						<ul className="space-y-2">
 							<li>
 								<Link
+									href="/consultation"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
+								>
+									Technical Consultation
+								</Link>
+							</li>
+							<li>
+								<Link
 									href="/revenue-scaling"
-									className="text-gray-400 hover:text-blue-light transition-colors"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
 								>
 									Revenue Scaling
 								</Link>
@@ -157,7 +150,7 @@ export default function Footer() {
 							<li>
 								<Link
 									href="/business-operation-optimization"
-									className="text-gray-400 hover:text-blue-light transition-colors"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
 								>
 									Business Operation Optimization
 								</Link>
@@ -165,9 +158,41 @@ export default function Footer() {
 							<li>
 								<Link
 									href="/tech-transformation"
-									className="text-gray-400 hover:text-blue-light transition-colors"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
 								>
 									Tech Transformation
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="/services/odoo"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
+								>
+									Odoo Implementation
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="/services/aws-devops"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
+								>
+									AWS &amp; DevOps
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="/services/web-design"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
+								>
+									Website Design
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="/ai"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
+								>
+									AI &amp; Machine Learning
 								</Link>
 							</li>
 						</ul>
@@ -179,23 +204,23 @@ export default function Footer() {
 							<li>
 								<Link
 									href="/about"
-									className="text-gray-400 hover:text-blue-light transition-colors"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
 								>
-									About Us
+									About
 								</Link>
 							</li>
 							<li>
 								<Link
 									href="/contact"
-									className="text-gray-400 hover:text-blue-light transition-colors"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
 								>
-									Contact Us
+									Contact
 								</Link>
 							</li>
 							<li>
 								<Link
 									href="/privacy-policy"
-									className="text-gray-400 hover:text-blue-light transition-colors"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
 								>
 									Privacy Policy
 								</Link>
@@ -203,7 +228,7 @@ export default function Footer() {
 							<li>
 								<Link
 									href="/terms-of-service"
-									className="text-gray-400 hover:text-blue-light transition-colors"
+									className="inline-block py-1 text-gray-400 hover:text-blue-light transition-colors"
 								>
 									Terms of Service
 								</Link>

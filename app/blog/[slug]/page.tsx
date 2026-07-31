@@ -1,8 +1,13 @@
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
+import type { Metadata } from "next"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
+import JsonLd from "@/components/seo/json-ld"
+import { breadcrumbSchema } from "@/lib/schema"
+import { pageMetadata } from "@/lib/seo"
+import { SITE_NAME, absoluteUrl } from "@/lib/site"
 
 interface BlogPost {
   title: string
@@ -21,16 +26,70 @@ export async function generateStaticParams() {
   return files.map((file) => ({ slug: file.replace(/\.md$/, "") }))
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
+function readPost(slug: string) {
   const filePath = path.join(process.cwd(), "content/blog", `${slug}.md`)
   const file = fs.readFileSync(filePath, "utf8")
-  const { data, content } = matter(file)
+  return matter(file)
+}
+
+/** Frontmatter dates are DD-MM-YYYY. */
+function isoDate(value: unknown) {
+  if (typeof value !== "string") return undefined
+  const match = value.match(/^(\d{2})-(\d{2})-(\d{4})$/)
+  if (!match) return undefined
+  const [, day, month, year] = match
+  return `${year}-${month}-${day}`
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const { slug } = await params
+  const { data } = readPost(slug)
+
+  return pageMetadata({
+    title: data.title ?? "Blog",
+    description: data.excerpt ?? "",
+    path: `/blog/${slug}`,
+    type: "article",
+  })
+}
+
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const { data, content } = readPost(slug)
 
   const post = { ...data, content } as BlogPost
+  const published = isoDate(data.date)
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    url: absoluteUrl(`/blog/${slug}`),
+    mainEntityOfPage: absoluteUrl(`/blog/${slug}`),
+    ...(post.image ? { image: absoluteUrl(post.image) } : {}),
+    ...(published ? { datePublished: published, dateModified: published } : {}),
+    author: { "@type": "Organization", name: SITE_NAME },
+    publisher: { "@id": `${absoluteUrl("/")}#organization` },
+    articleSection: post.category,
+    inLanguage: "en",
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A0A0A] via-[#0D0D12] to-[#0A0A0A] pt-24 pb-20 relative overflow-hidden">
+     <JsonLd schema={articleSchema} id="schema-article" />
+     <JsonLd
+       schema={breadcrumbSchema([
+         { name: "Home", path: "/" },
+         { name: "Blog", path: "/blog" },
+         { name: post.title, path: `/blog/${slug}` },
+       ])}
+       id="schema-breadcrumb"
+     />
      <div className="absolute inset-0 bg-blue-500/10 blur-3xl"></div>
 
       <div className="mb-12 relative z-10">

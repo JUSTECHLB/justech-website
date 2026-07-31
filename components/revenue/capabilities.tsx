@@ -74,7 +74,7 @@ export default function Capabilities() {
 			icon: <Users className="w-8 h-8 text-blue-light" />,
 			title: "Customer Retention Systems",
 			description:
-				"Comprehensive customer lifecycle management tools that identify at-risk customers, implement retention strategies, and maximize customer lifetime value through personalized engagement.",
+				"Customer lifecycle management tools that identify at-risk customers, implement retention strategies, and maximize customer lifetime value through personalized engagement.",
 			features: [
 				"Churn prediction algorithms",
 				"Customer health scoring",
@@ -103,7 +103,7 @@ export default function Capabilities() {
 	};
 
 	return (
-		<section className="relative py-32">
+		<section className="relative py-32 overflow-hidden">
 			<div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-to-br from-indigo/10 to-blue/5 rounded-full blur-[180px] -z-10"></div>
 			<div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-blue/5 to-transparent rounded-full blur-[120px] -z-10"></div>
 
@@ -121,7 +121,7 @@ export default function Capabilities() {
 						</span>
 					</div>
 					<h2 className="text-4xl md:text-5xl xl:text-6xl font-bold mb-8 leading-tight tracking-tight">
-						Comprehensive{" "}
+						Our{" "}
 						<span className="gradient-text">Revenue Scaling</span>{" "}
 						Capabilities
 					</h2>

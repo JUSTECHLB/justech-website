@@ -87,7 +87,7 @@ export default function CaseStudies() {
 	];
 
 	return (
-		<section className="relative py-32">
+		<section className="relative py-32 overflow-hidden">
 			<div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-gradient-to-br from-indigo/10 to-blue/5 rounded-full blur-[180px] -z-10"></div>
 			<div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-blue/5 to-transparent rounded-full blur-[120px] -z-10"></div>
 
