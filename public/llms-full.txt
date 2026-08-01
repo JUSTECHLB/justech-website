@@ -111,7 +111,9 @@ AI is treated as a layer across the three pillars rather than a fourth pillar or
 
 ## Company
 
-Founded in Beirut in 2019. Within months the country went into the protests, then the banking collapse, then the port explosion, then COVID. Payment rails stopped working and many software companies in Lebanon closed in that window. JUSTECH is still operating and still shipping.
+Founded in Beirut in 2019 by Omar Chouman, who is Founder and CEO and also the technical lead. He leads the engineering side of every engagement and runs the discovery calls himself, so the person who scopes a project is the person accountable for delivering it.
+
+Within months of founding, the country went into the protests, then the banking collapse, then the port explosion, then COVID. Payment rails stopped working and many software companies in Lebanon closed in that window. JUSTECH is still operating and still shipping.
 
 Clients include Rut Essentials, AGS Solutions, Lebotics, Ensemble Renard, Clover Mind Solutions, and The Yas Design. Rut Essentials is five separate builds plus an ongoing maintenance and management retainer.
 
