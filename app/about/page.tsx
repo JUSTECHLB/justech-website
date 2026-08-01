@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Award, Users, Clock, Target, ArrowRight } from "lucide-react";
 
@@ -126,6 +127,81 @@ export default function AboutPage() {
 								and management retainer. Clients who have
 								options keep coming back.
 							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="relative py-32 overflow-hidden">
+				<div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo/5 rounded-full blur-[150px] -z-10"></div>
+
+				<div className="container mx-auto">
+					<div className="mb-16">
+						<div className="mb-4 inline-block">
+							<span className="px-4 py-2 bg-blue/10 rounded-full text-blue-light text-sm font-medium">
+								Our People
+							</span>
+						</div>
+						<h2 className="text-4xl md:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
+							Who you'll actually{" "}
+							<span className="gradient-text">be working with</span>
+						</h2>
+					</div>
+
+					{/*
+					  TODO (needs input from JUSTECH): add the rest of the team here as
+					  real people with real photos. The layout below switches from the
+					  single-founder feature to a grid once there is more than one entry.
+					  Do not add anyone who does not exist: invented staff was the most
+					  damaging thing on the old version of this page.
+					*/}
+					<div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+						<div className="lg:col-span-4">
+							<div className="relative max-w-[320px] mx-auto lg:mx-0">
+								<div className="absolute -inset-3 bg-gradient-to-r from-blue/20 to-indigo/20 rounded-3xl blur-xl -z-10"></div>
+								<Image
+									src="/images/Omar.jpg"
+									alt="Omar Chouman, founder of JUSTECH"
+									width={500}
+									height={500}
+									className="w-full h-auto rounded-3xl border border-blue/20 object-cover"
+									priority={false}
+								/>
+							</div>
+						</div>
+
+						<div className="lg:col-span-8">
+							<h3 className="text-3xl md:text-4xl font-bold mb-2">
+								Omar Chouman
+							</h3>
+							<p className="text-lg text-blue-light mb-8">
+								Founder &amp; CEO, Technical Lead
+							</p>
+							<div className="w-20 h-1 bg-gradient-to-r from-blue to-indigo mb-8"></div>
+
+							<div className="space-y-6 max-w-2xl">
+								<p className="text-xl leading-relaxed text-gray-300">
+									Omar founded JUSTECH in Beirut in 2019 and
+									still writes code. He leads the technical
+									side of every engagement, which means the
+									person who scopes your project is the person
+									accountable for delivering it.
+								</p>
+								<p className="text-xl leading-relaxed text-gray-300">
+									He runs the discovery calls himself. When you
+									book one, that is who you are talking to, not
+									a salesperson who will hand you over
+									afterwards.
+								</p>
+							</div>
+
+							<Link
+								{...discoveryLinkProps}
+								className="inline-flex items-center gap-2 mt-8 text-blue-light hover:text-white transition-colors"
+							>
+								Book a call with Omar
+								<ArrowRight className="h-4 w-4" />
+							</Link>
 						</div>
 					</div>
 				</div>

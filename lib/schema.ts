@@ -10,6 +10,28 @@ import {
 
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 const WEBSITE_ID = `${SITE_URL}/#website`;
+const FOUNDER_ID = `${SITE_URL}/about#omar-chouman`;
+
+/**
+ * A named human behind the company. Search engines and answer engines both
+ * weigh this: it is the difference between a company that claims engineering
+ * depth and one that says who is accountable for it.
+ */
+export const founderSchema = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	"@id": FOUNDER_ID,
+	name: "Omar Chouman",
+	jobTitle: "Founder and CEO, Technical Lead",
+	image: absoluteUrl("/images/Omar.jpg"),
+	url: absoluteUrl("/about"),
+	worksFor: { "@id": ORGANIZATION_ID },
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: CONTACT.city,
+		addressCountry: CONTACT.countryCode,
+	},
+};
 
 /**
  * ProfessionalService inherits from both Organization and LocalBusiness, which
@@ -33,6 +55,7 @@ export const organizationSchema = {
 	},
 	image: absoluteUrl("/jt.webp"),
 	foundingDate: FOUNDING_YEAR,
+	founder: { "@id": FOUNDER_ID },
 	email: CONTACT.email,
 	telephone: CONTACT.phoneE164,
 	address: {
