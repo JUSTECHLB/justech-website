@@ -29,6 +29,9 @@ export default function ContactPage() {
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [submitError, setSubmitError] = useState<string | null>(null);
+	// Honeypot: hidden from people, filled in by bots; Netlify drops those.
+	const [botField, setBotField] = useState("");
 
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -45,18 +48,23 @@ export default function ContactPage() {
 		e.preventDefault();
 		setIsSubmitting(true);
 
+		setSubmitError(null);
+
 		try {
-			const response = await fetch('/contact.php', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(formData),
+			// Netlify Forms: post url-encoded fields to the static file that
+			// declares the form (public/__forms.html).
+			const response = await fetch("/__forms.html", {
+				method: "POST",
+				headers: { "Content-Type": "application/x-www-form-urlencoded" },
+				body: new URLSearchParams({
+					"form-name": "contact",
+					"bot-field": botField,
+					...formData,
+				}).toString(),
 			});
 
 			if (!response.ok) {
-				const errorData = await response.json();
-				throw new Error(errorData.error || 'Failed to send message');
+				throw new Error(`Form submission failed with ${response.status}`);
 			}
 
 			setIsSubmitted(true);
@@ -68,7 +76,10 @@ export default function ContactPage() {
 				message: "",
 			});
 		} catch (error) {
-			console.error('Error sending message:', error);
+			console.error("Error sending message:", error);
+			setSubmitError(
+				"Your message could not be sent. Please email contact@justechlb.com or call +961 78 890 304 instead."
+			);
 		} finally {
 			setIsSubmitting(false);
 		}
@@ -126,9 +137,22 @@ export default function ContactPage() {
 								</div>
 							) : (
 								<form
+									name="contact"
 									onSubmit={handleSubmit}
 									className="space-y-6"
 								>
+									<p className="hidden" aria-hidden="true">
+										<label>
+											Leave this empty:{" "}
+											<input
+												name="bot-field"
+												tabIndex={-1}
+												autoComplete="off"
+												value={botField}
+												onChange={(e) => setBotField(e.target.value)}
+											/>
+										</label>
+									</p>
 									<div className="space-y-2">
 										<Label
 											htmlFor="name"
@@ -238,6 +262,15 @@ export default function ContactPage() {
 											className="bg-dark-lighter border-blue/20 focus:border-blue-light transition-colors"
 										/>
 									</div>
+
+									{submitError && (
+										<p
+											role="alert"
+											className="text-sm text-red-400 bg-red-500/10 border border-red-500/20 rounded-lg p-3"
+										>
+											{submitError}
+										</p>
+									)}
 
 									<Button
 										type="submit"

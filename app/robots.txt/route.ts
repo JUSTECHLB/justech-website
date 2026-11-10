@@ -12,7 +12,7 @@ import { SITE_URL } from "@/lib/site";
 const body = `User-Agent: *
 Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
-Disallow: /contact.php
+Disallow: /__forms.html
 Disallow: /md/
 
 Host: ${SITE_URL}
