@@ -55,18 +55,24 @@ export default function Footer() {
 										size={20}
 										className="mr-3 text-blue-light"
 									/>
-									<span className="text-gray-300">
+									<a
+										href="tel:+96178890304"
+										className="text-gray-300 hover:text-white transition-colors"
+									>
 										+961 78 890 304
-									</span>
+									</a>
 								</li>
 								<li className="flex items-center">
 									<Mail
 										size={20}
 										className="mr-3 text-blue-light"
 									/>
-									<span className="text-gray-300">
+									<a
+										href="mailto:contact@justechlb.com"
+										className="text-gray-300 hover:text-white transition-colors"
+									>
 										contact@justechlb.com
-									</span>
+									</a>
 								</li>
 							</ul>
 						</div>
