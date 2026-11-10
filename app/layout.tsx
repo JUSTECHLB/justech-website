@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 import RadialBackground from "@/components/radial-background";
 import Script from "next/script";
 import JsonLd from "@/components/seo/json-ld";
+import WebMcp from "@/components/agent/webmcp";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 
@@ -92,6 +93,7 @@ export default function RootLayout({
 					<Navbar />
 					{children}
 					<Footer />
+					<WebMcp />
 				</ThemeProvider>
 			</body>
 		</html>

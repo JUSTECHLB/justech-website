@@ -36,6 +36,11 @@ How to engage us: every relationship starts with a free discovery call, booked a
 - [Book a discovery call](https://calendly.com/omar-chouman0/justech-discovery-call-with-omar-chouman): Free, no obligation. The first step for every engagement.
 - [Blog](https://justechlb.com/blog): Notes on software engineering, web development, SEO, and automation.
 
+## For agents
+
+- [MCP server](https://justechlb.com/mcp): Read-only MCP endpoint (Streamable HTTP, no auth) with tools to list services, get contact details, and get the discovery call link. Described by the [server card](https://justechlb.com/.well-known/mcp/server-card.json).
+- Markdown versions of every page: send `Accept: text/markdown`, or append `.md` to the path (for example [index.md](https://justechlb.com/index.md), [about.md](https://justechlb.com/about.md)).
+
 ## Optional
 
 - [Full site content](https://justechlb.com/llms-full.txt): Positioning, pillar detail, service detail, and frequently asked questions in one file.
